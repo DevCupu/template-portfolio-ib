@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>John Doe - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Heroicons CDN -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header
+      id="header"
+      class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-100 z-50 transition-all duration-500"
+    >
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="flex justify-between items-center py-6">
+          <a
+            href="#"
+            class="text-lg font-medium text-gray-900 transition-all duration-300 hover:opacity-70"
+          >
+            Ib
+          </a>
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex space-x-12">
+            <a
+              href="#home"
+              class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors nav-item"
+            >
+              <i data-feather="home" class="w-4 h-4"></i> Home
+            </a>
+            <a
+              href="#about"
+              class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors nav-item"
+            >
+              <i data-feather="user" class="w-4 h-4"></i> About
+            </a>
+            <a
+              href="#work"
+              class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors nav-item"
+            >
+              <i data-feather="briefcase" class="w-4 h-4"></i> Work
+            </a>
+            <a
+              href="#blog"
+              class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors nav-item"
+            >
+              <i data-feather="book-open" class="w-4 h-4"></i> Blog
+            </a>
+            <a
+              href="#contact"
+              class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors nav-item"
+            >
+              <i data-feather="mail" class="w-4 h-4"></i> Contact
+            </a>
+          </nav>
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden text-gray-600 transition-all duration-300 hover:text-gray-900"
+          >
+            <div class="hamburger flex flex-col gap-1">
+              <span class="block w-6 h-0.5 bg-gray-600"></span>
+              <span class="block w-6 h-0.5 bg-gray-600"></span>
+              <span class="block w-6 h-0.5 bg-gray-600"></span>
+            </div>
+          </button>
+        </div>
+        <!-- Mobile Navigation -->
+        <div
+          id="mobile-menu"
+          class="mobile-menu md:hidden border-t border-gray-100 pt-6"
+        >
+          <nav class="pb-6">
+            <div class="flex flex-col space-y-6">
+              <a
+                href="#home"
+                class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors mobile-nav-item"
+              >
+                <i data-feather="home" class="w-4 h-4"></i> Home
+              </a>
+              <a
+                href="#about"
+                class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors mobile-nav-item"
+              >
+                <i data-feather="user" class="w-4 h-4"></i> About
+              </a>
+              <a
+                href="#work"
+                class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors mobile-nav-item"
+              >
+                <i data-feather="briefcase" class="w-4 h-4"></i> Work
+              </a>
+              <a
+                href="#blog"
+                class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors mobile-nav-item"
+              >
+                <i data-feather="book-open" class="w-4 h-4"></i> Blog
+              </a>
+              <a
+                href="#contact"
+                class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors mobile-nav-item"
+              >
+                <i data-feather="mail" class="w-4 h-4"></i> Contact
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center bg-white"
+    >
+      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <h1
+          class="text-4xl md:text-6xl font-light text-gray-900 mb-8 tracking-tight hero-text"
+        >
+          <span id="typewriter-text"></span>
+        </h1>
+
+        <p
+          class="text-lg md:text-xl text-gray-500 mb-16 max-w-2xl mx-auto leading-relaxed hero-subtitle"
+        >
+          I create digital experiences that are simple, beautiful, and
+          functional.
+        </p>
+        <div class="flex justify-center hero-cta">
+          <a
+            href="#work"
+            class="flex items-center gap-2 text-sm text-gray-900 border-b border-gray-900 pb-1 hover:border-gray-400 transition-all duration-300 nav-item"
+          >
+            <i data-feather="arrow-right-circle" class="w-4 h-4"></i> View my
+            work
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 bg-white">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-16">
+          <div class="fade-in-left">
+            <h2 class="text-2xl font-light text-gray-900 mb-8">About</h2>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              I'm a full-stack developer with 5+ years of experience building
+              web applications. I focus on creating clean, efficient solutions
+              that solve real problems.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              When I'm not coding, I enjoy exploring new technologies,
+              contributing to open-source projects, and sharing knowledge
+              through writing.
+            </p>
+          </div>
+          <div class="fade-in-right">
+            <h3
+              class="text-lg font-medium text-gray-900 mb-6 flex items-center gap-2"
+            >
+              <i data-feather="star" class="w-5 h-5"></i> Skills
+            </h3>
+            <div class="space-y-4">
+              <div class="fade-in stagger-1">
+                <h4
+                  class="flex items-center gap-2 text-sm font-medium text-gray-900 mb-2"
+                >
+                  <i data-feather="monitor" class="w-4 h-4"></i> Frontend
+                </h4>
+                <p class="text-sm text-gray-600">
+                  React, Next.js, TypeScript, Tailwind CSS
+                </p>
+              </div>
+              <div class="fade-in stagger-2">
+                <h4
+                  class="flex items-center gap-2 text-sm font-medium text-gray-900 mb-2"
+                >
+                  <i data-feather="server" class="w-4 h-4"></i> Backend
+                </h4>
+                <p class="text-sm text-gray-600">
+                  Node.js, Python, PostgreSQL, MongoDB
+                </p>
+              </div>
+              <div class="fade-in stagger-3">
+                <h4
+                  class="flex items-center gap-2 text-sm font-medium text-gray-900 mb-2"
+                >
+                  <i data-feather="tool" class="w-4 h-4"></i> Tools
+                </h4>
+                <p class="text-sm text-gray-600">Git, Docker, AWS, Vercel</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-32 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8">
+        <h2
+          class="text-2xl font-light text-gray-900 mb-16 fade-in flex items-center gap-2"
+        >
+          <i data-feather="folder" class="w-5 h-5"></i> Selected Work
+        </h2>
+        <div class="space-y-16">
+          <!-- ... (work cards remain unchanged, icons not necessary here) ... -->
+          <!-- Copy your work cards here -->
+          <div
+            class="border-b border-gray-200 pb-16 project-card fade-in stagger-1"
+          >
+            <div class="grid md:grid-cols-3 gap-8">
+              <div>
+                <h3 class="text-lg font-medium text-gray-900 mb-2">
+                  E-Commerce Platform
+                </h3>
+                <p class="text-sm text-gray-500">2024</p>
+              </div>
+              <div class="md:col-span-2">
+                <p class="text-gray-600 mb-4 leading-relaxed">
+                  Full-stack e-commerce solution with user authentication and
+                  payment processing.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded tech-tag"
+                    style="animation-delay: 0s"
+                    >Next.js</span
+                  >
+                  <span
+                    class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded tech-tag"
+                    style="animation-delay: 0.1s"
+                    >PostgreSQL</span
+                  >
+                  <span
+                    class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded tech-tag"
+                    style="animation-delay: 0.2s"
+                    >Stripe</span
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="flex items-center gap-2 text-sm text-gray-900 border-b border-gray-900 pb-1 hover:border-gray-400 transition-all duration-300 nav-item"
+                >
+                  <i data-feather="external-link" class="w-4 h-4"></i> View
+                  project
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border-b border-gray-200 pb-16 project-card fade-in stagger-2"
+          >
+            <div class="grid md:grid-cols-3 gap-8">
+              <div>
+                <h3 class="text-lg font-medium text-gray-900 mb-2">
+                  Task Management App
+                </h3>
+                <p class="text-sm text-gray-500">2023</p>
+              </div>
+              <div class="md:col-span-2">
+                <p class="text-gray-600 mb-4 leading-relaxed">
+                  Collaborative task management with real-time updates and team
+                  features.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded tech-tag"
+                    style="animation-delay: 0s"
+                    >React</span
+                  >
+                  <span
+                    class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded tech-tag"
+                    style="animation-delay: 0.1s"
+                    >Node.js</span
+                  >
+                  <span
+                    class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded tech-tag"
+                    style="animation-delay: 0.2s"
+                    >Socket.io</span
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="flex items-center gap-2 text-sm text-gray-900 border-b border-gray-900 pb-1 hover:border-gray-400 transition-all duration-300 nav-item"
+                >
+                  <i data-feather="external-link" class="w-4 h-4"></i> View
+                  project
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="pb-16 project-card fade-in stagger-3">
+            <div class="grid md:grid-cols-3 gap-8">
+              <div>
+                <h3 class="text-lg font-medium text-gray-900 mb-2">
+                  Weather Dashboard
+                </h3>
+                <p class="text-sm text-gray-500">2023</p>
+              </div>
+              <div class="md:col-span-2">
+                <p class="text-gray-600 mb-4 leading-relaxed">
+                  Responsive weather dashboard with data visualizations and
+                  forecasts.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded tech-tag"
+                    style="animation-delay: 0s"
+                    >Vue.js</span
+                  >
+                  <span
+                    class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded tech-tag"
+                    style="animation-delay: 0.1s"
+                    >Chart.js</span
+                  >
+                  <span
+                    class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded tech-tag"
+                    style="animation-delay: 0.2s"
+                    >API</span
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="flex items-center gap-2 text-sm text-gray-900 border-b border-gray-900 pb-1 hover:border-gray-400 transition-all duration-300 nav-item"
+                >
+                  <i data-feather="external-link" class="w-4 h-4"></i> View
+                  project
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-32 bg-white">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8">
+        <h2
+          class="text-2xl font-light text-gray-900 mb-16 fade-in flex items-center gap-2"
+        >
+          <i data-feather="edit-3" class="w-5 h-5"></i> Latest Articles
+        </h2>
+        <div class="space-y-12">
+          <article
+            class="border-b border-gray-100 pb-12 project-card fade-in stagger-1"
+          >
+            <div class="grid md:grid-cols-4 gap-8">
+              <div>
+                <time class="text-sm text-gray-500 flex items-center gap-1">
+                  <i data-feather="calendar" class="w-4 h-4"></i> January 15,
+                  2024
+                </time>
+              </div>
+              <div class="md:col-span-3">
+                <h3
+                  class="text-lg font-medium text-gray-900 mb-3 hover:text-gray-600 transition-colors"
+                >
+                  <a href="#">Getting Started with Next.js 14</a>
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Learn how to build modern web applications with the latest
+                  features in Next.js 14.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article
+            class="border-b border-gray-100 pb-12 project-card fade-in stagger-2"
+          >
+            <div class="grid md:grid-cols-4 gap-8">
+              <div>
+                <time class="text-sm text-gray-500 flex items-center gap-1">
+                  <i data-feather="calendar" class="w-4 h-4"></i> January 10,
+                  2024
+                </time>
+              </div>
+              <div class="md:col-span-3">
+                <h3
+                  class="text-lg font-medium text-gray-900 mb-3 hover:text-gray-600 transition-colors"
+                >
+                  <a href="#">Mastering Tailwind CSS</a>
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                  A comprehensive guide to building beautiful, responsive
+                  designs with Tailwind CSS.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="pb-12 project-card fade-in stagger-3">
+            <div class="grid md:grid-cols-4 gap-8">
+              <div>
+                <time class="text-sm text-gray-500 flex items-center gap-1">
+                  <i data-feather="calendar" class="w-4 h-4"></i> January 5,
+                  2024
+                </time>
+              </div>
+              <div class="md:col-span-3">
+                <h3
+                  class="text-lg font-medium text-gray-900 mb-3 hover:text-gray-600 transition-colors"
+                >
+                  <a href="#">Building Scalable React Applications</a>
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Best practices for structuring and organizing large React
+                  applications.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-white">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-16">
+          <div class="fade-in-left">
+            <h2 class="text-2xl font-light text-gray-900 mb-8">Get in touch</h2>
+            <p class="text-gray-600 leading-relaxed mb-8">
+              I'm always interested in hearing about new projects and
+              opportunities.
+            </p>
+            <div class="space-y-4">
+              <div class="fade-in stagger-1">
+                <p class="text-sm text-gray-500 mb-1 flex items-center gap-1">
+                  <i data-feather="mail" class="w-4 h-4"></i> Email
+                </p>
+                <a
+                  href="mailto:john.doe@example.com"
+                  class="flex items-center gap-2 text-gray-900 hover:text-gray-600 transition-colors"
+                >
+                  <i data-feather="send" class="w-4 h-4"></i>
+                  john.doe@example.com
+                </a>
+              </div>
+              <div class="fade-in stagger-2">
+                <p class="text-sm text-gray-500 mb-1 flex items-center gap-1">
+                  <i data-feather="map-pin" class="w-4 h-4"></i> Location
+                </p>
+                <p class="flex items-center gap-2 text-gray-900">
+                  <i data-feather="map" class="w-4 h-4"></i> San Francisco, CA
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="fade-in-right">
+            <form class="space-y-6">
+              <div class="fade-in stagger-1">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  class="w-full px-0 py-3 border-0 bg-transparent placeholder-gray-400 form-input"
+                />
+              </div>
+              <div class="fade-in stagger-2">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="w-full px-0 py-3 border-0 bg-transparent placeholder-gray-400 form-input"
+                />
+              </div>
+              <div class="fade-in stagger-3">
+                <textarea
+                  rows="4"
+                  placeholder="Message"
+                  class="w-full px-0 py-3 border-0 bg-transparent placeholder-gray-400 resize-none form-input"
+                ></textarea>
+              </div>
+              <div class="fade-in stagger-4">
+                <button
+                  type="submit"
+                  class="flex items-center gap-2 text-sm text-gray-900 border-b border-gray-900 pb-1 hover:border-gray-400 transition-all duration-300 nav-item"
+                >
+                  <i data-feather="send" class="w-4 h-4"></i> Send message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-white border-t border-gray-100">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row justify-between items-start md:items-center fade-in"
+        >
+          <div class="mb-8 md:mb-0">
+            <p class="text-sm text-gray-500">© 2024 John Doe</p>
+          </div>
+          <div class="flex space-x-8">
+            <a
+              href="#"
+              class="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition-colors social-link"
+            >
+              <i data-feather="github" class="w-4 h-4"></i> GitHub
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition-colors social-link"
+            >
+              <i data-feather="linkedin" class="w-4 h-4"></i> LinkedIn
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition-colors social-link"
+            >
+              <i data-feather="twitter" class="w-4 h-4"></i> Twitter
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>

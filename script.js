@@ -1,5 +1,5 @@
 // Typewriter animation for hero title (smoother transitions)
-const titles = ["Junior Backend Developer", "Cloud Enthusiast"];
+const titles = ["Junior Backend Engineer & Cloud Enthusiast", "Building Scalable Web Applications with Laravel, Go, and Express"];
 let titleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;

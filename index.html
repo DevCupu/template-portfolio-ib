@@ -62,7 +62,9 @@
             </a>
           </nav>
           <!-- Language switcher (desktop) -->
-          <div class="hidden md:flex items-center gap-2 text-xs font-medium text-gray-500">
+          <div
+            class="hidden md:flex items-center gap-2 text-xs font-medium text-gray-500"
+          >
             <button
               type="button"
               class="lang-switch px-2 py-1 rounded border border-transparent hover:border-gray-300 text-gray-500"
@@ -267,11 +269,65 @@
           <!-- Featured Fullstack Laravel Projects (paling atas) -->
           <section class="space-y-6">
             <div class="flex items-center justify-between">
-              <h3 class="text-lg md:text-2xl font-semibold text-gray-500">
+              <h3 class="text-lg md:text-1xl font-semibold text-gray-500">
                 Featured Projects
               </h3>
             </div>
-            <div class="grid md:grid-cols-2 gap-10">
+
+            <div class="grid md:grid-cols-2 gap-14">
+              <!-- Anemia Detection API -->
+              <article
+                class="project-card fade-in stagger-1 border-b border-gray-200 pb-6"
+              >
+                <div class="mb-4 overflow-hidden rounded-xl bg-gray-100">
+                  <img
+                    src="images/Screenshots Application anem.ai.png"
+                    alt="Anemia Detection API"
+                    class="w-full h-44 md:h-52 object-cover"
+                  />
+                </div>
+                <h4 class="text-lg font-medium text-gray-900 mb-1">
+                  Anemia Detection API
+                </h4>
+                <p class="text-sm text-gray-500 mb-2">
+                  Anem.ai – AI-based Anemia Detection App (Bangkit 2024
+                  Capstone)
+                </p>
+                <p class="text-sm text-gray-600 mb-3">
+                  Express-based RESTful API yang memproses data pemeriksaan
+                  konjungtiva mata untuk mengklasifikasikan apakah pasien
+                  berisiko mengalami anemia. API ini dirancang sebagai backend
+                  yang siap diintegrasikan dengan aplikasi mobile atau web.
+                </p>
+                <div class="flex flex-wrap gap-2 text-xs text-gray-500 mb-2">
+                  <span class="bg-gray-100 px-2 py-1 rounded">Express.js</span>
+                  <span class="bg-gray-100 px-2 py-1 rounded">REST API</span>
+                  <span class="bg-gray-100 px-2 py-1 rounded">MySQL</span>
+                  <span class="bg-gray-100 px-2 py-1 rounded">Postman</span>
+                  <span class="bg-gray-100 px-2 py-1 rounded">GCP</span>
+                  <span class="bg-gray-100 px-2 py-1 rounded">Cloud Run</span>
+                  <span class="bg-gray-100 px-2 py-1 rounded">Firestore</span>
+                </div>
+                <div class="flex flex-col space-y-2 mt-2">
+                  <a
+                    href="projects/project-anemia-api.html"
+                    class="view-project-btn flex items-center gap-2 text-xs text-gray-900 pb-1 hover:border-gray-400 transition-all duration-300 nav-item"
+                  >
+                    <i data-feather="external-link" class="w-4 h-4"></i>
+                    View details
+                  </a>
+                  <a
+                    href="https://github.com/Anemi-ai"
+                    target="_blank"
+                    rel="noopener"
+                    class="view-project-btn flex items-center gap-2 text-xs text-gray-900 pb-1 hover:border-gray-400 transition-all duration-300 nav-item"
+                  >
+                    <i data-feather="external-link" class="w-4 h-4"></i>
+                    View on GitHub
+                  </a>
+                </div>
+              </article>
+
               <!-- POS System -->
               <article
                 class="project-card fade-in stagger-1 border-b border-gray-200 pb-6"
@@ -286,33 +342,40 @@
                 <h4 class="text-lg font-medium text-gray-900 mb-1">
                   POS System
                 </h4>
-                <p class="text-sm text-gray-500 mb-2">
-                  Point of Sale web app.
-                </p>
+                <p class="text-sm text-gray-500 mb-2">Point of Sale web app.</p>
                 <p class="text-sm text-gray-600 mb-3">
-                Laravel Web-based Point of Sale (POS) untuk manajemen kafe dengan fitur lengkap meliputi manajemen menu, pesanan, meja, pembayaran, dan kontrol akses pengguna.
+                  Laravel Web-based Point of Sale (POS) untuk manajemen kafe
+                  dengan fitur lengkap meliputi manajemen menu, pesanan, meja,
+                  pembayaran, dan kontrol akses pengguna.
                 </p>
                 <div class="flex flex-wrap gap-2 text-xs text-gray-500 mb-2">
                   <span class="bg-gray-100 px-2 py-1 rounded">Laravel 12</span>
                   <span class="bg-gray-100 px-2 py-1 rounded">MySQL</span>
                   <span class="bg-gray-100 px-2 py-1 rounded">Livewire 3</span>
-                  <span class="bg-gray-100 px-2 py-1 rounded">Tailwind CSS</span>
+                  <span class="bg-gray-100 px-2 py-1 rounded"
+                    >Tailwind CSS</span
+                  >
                 </div>
                 <div class="flex flex-col space-y-2 mt-2">
                   <a
                     href="projects/project-pos.html"
-                    class="view-project-btn flex items-center gap-2 text-xs text-gray-900 pb-1 hover:border-gray-400 transition-all duration-300 nav-item">
+                    class="view-project-btn flex items-center gap-2 text-xs text-gray-900 pb-1 hover:border-gray-400 transition-all duration-300 nav-item"
+                  >
                     <i data-feather="external-link" class="w-4 h-4"></i>
                     View details
                   </a>
                   <a
-                    href="https://github.com/DevCupu/laravel-pos-system" target="_blank" rel="noopener"
-                    class="view-project-btn flex items-center gap-2 text-xs text-gray-900 pb-1 hover:border-gray-400 transition-all duration-300 nav-item">
+                    href="https://github.com/DevCupu/laravel-pos-system"
+                    target="_blank"
+                    rel="noopener"
+                    class="view-project-btn flex items-center gap-2 text-xs text-gray-900 pb-1 hover:border-gray-400 transition-all duration-300 nav-item"
+                  >
                     <i data-feather="external-link" class="w-4 h-4"></i>
                     View on GitHub
                   </a>
                 </div>
               </article>
+            </div>
           </section>
 
           <!-- More Projects link -->

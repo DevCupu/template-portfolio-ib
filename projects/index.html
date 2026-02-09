@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ib - All Projects</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="https://unpkg.com/feather-icons"></script>
+		<link rel="stylesheet" href="../style.css" />
+	</head>
+	<body class="bg-white text-gray-900">
+		<header
+			class="border-b border-gray-100 bg-white/90 backdrop-blur-sm sticky top-0 z-40"
+		>
+			<div
+				class="max-w-5xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between"
+			>
+				<a
+					href="../index.html"
+					class="text-lg font-medium text-gray-900 hover:opacity-70 transition"
+					>Ib</a
+				>
+				<a
+					href="../index.html#work"
+					class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+				>
+					<i data-feather="arrow-left" class="w-4 h-4"></i>
+					Back to portfolio
+				</a>
+			</div>
+		</header>
+
+		<main class="py-16">
+			<div class="max-w-5xl mx-auto px-6 lg:px-8">
+				<h1 class="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+					All Projects
+				</h1>
+				<p class="text-gray-600 mb-10 max-w-2xl">
+					A more complete list of projects I have worked on, including
+					experiments, side projects, and client work.
+				</p>
+
+				<div class="space-y-12">
+					<!-- Example project item -->
+					<article class="border-b border-gray-100 pb-10">
+						<div class="grid md:grid-cols-3 gap-8">
+							<div>
+								<h2 class="text-lg font-medium text-gray-900 mb-1">
+									Web-App System POS
+								</h2>
+								<p class="text-sm text-gray-500 mb-3">
+									2024 · Backend & DevOps
+								</p>
+								<p class="inline-flex items-center gap-1 text-xs text-gray-500">
+									<i data-feather="map-pin" class="w-3 h-3"></i>
+									Internal / Client project
+								</p>
+							</div>
+							<div class="md:col-span-2 space-y-3">
+								<p class="text-gray-600 leading-relaxed">
+									Point of Sale (POS) web application for multi-branch stores
+									with inventory management, cashier interface, and reporting
+									dashboard. Built with Laravel and MySQL, containerized with
+									Docker, and deployed to cloud environment.
+								</p>
+								<ul
+									class="list-disc list-inside text-sm text-gray-600 space-y-1"
+								>
+									<li>Role-based access (Admin, Kasir, Supervisor).</li>
+									<li>Real-time stock update and daily sales reports.</li>
+									<li>RESTful API for integration with external systems.</li>
+								</ul>
+								<div class="flex flex-wrap gap-2 pt-1">
+									<span
+										class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded"
+										>Laravel</span
+									>
+									<span
+										class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded"
+										>MySQL</span
+									>
+									<span
+										class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded"
+										>Docker</span
+									>
+									<span
+										class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded"
+										>REST API</span
+									>
+								</div>
+							</div>
+						</div>
+					</article>
+
+					<!-- Duplicate & edit blocks below for more projects -->
+					<article class="border-b border-gray-100 pb-10">
+						<div class="grid md:grid-cols-3 gap-8">
+							<div>
+								<h2 class="text-lg font-medium text-gray-900 mb-1">
+									Task Management App
+								</h2>
+								<p class="text-sm text-gray-500 mb-3">2023 · Fullstack</p>
+							</div>
+							<div class="md:col-span-2 space-y-3">
+								<p class="text-gray-600 leading-relaxed">
+									Collaborative task management platform with kanban board, due
+									dates, and team activity tracking.
+								</p>
+								<ul
+									class="list-disc list-inside text-sm text-gray-600 space-y-1"
+								>
+									<li>Realtime update using WebSocket / Pusher.</li>
+									<li>Multi-project support with custom labels and filters.</li>
+								</ul>
+								<div class="flex flex-wrap gap-2 pt-1">
+									<span
+										class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded"
+										>Laravel</span
+									>
+									<span
+										class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded"
+										>Livewire</span
+									>
+									<span
+										class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded"
+										>MySQL</span
+									>
+								</div>
+							</div>
+						</div>
+					</article>
+
+					<article class="pb-10">
+						<div class="grid md:grid-cols-3 gap-8">
+							<div>
+								<h2 class="text-lg font-medium text-gray-900 mb-1">
+									Weather Dashboard
+								</h2>
+								<p class="text-sm text-gray-500 mb-3">2023 · Frontend</p>
+							</div>
+							<div class="md:col-span-2 space-y-3">
+								<p class="text-gray-600 leading-relaxed">
+									Weather dashboard consuming public API, showing current
+									conditions and 5-day forecast with simple charts.
+								</p>
+								<div class="flex flex-wrap gap-2 pt-1">
+									<span
+										class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded"
+										>Vue.js</span
+									>
+									<span
+										class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded"
+										>REST API</span
+									>
+									<span
+										class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded"
+										>Chart.js</span
+									>
+								</div>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</main>
+
+		<script>
+			feather.replace();
+		</script>
+	</body>
+</html>

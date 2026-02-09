@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POS System - Ib Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body class="bg-white text-gray-900">
+    <header
+      class="border-b border-gray-100 bg-white/90 backdrop-blur-sm sticky top-0 z-40"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between"
+      >
+        <a
+          href="../index.html"
+          class="text-lg font-medium text-gray-900 hover:opacity-70 transition"
+          >Ib</a
+        >
+        <nav class="flex items-center gap-4 text-sm text-gray-600">
+          <a
+            href="../index.html#work"
+            class="flex items-center gap-1 hover:text-gray-900 transition-colors"
+          >
+            <i data-feather="arrow-left" class="w-4 h-4"></i>
+            Back to work
+          </a>
+          <a
+            href="./index.html"
+            class="flex items-center gap-1 hover:text-gray-900 transition-colors"
+          >
+            <i data-feather="layers" class="w-4 h-4"></i>
+            All projects
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="py-12 md:py-16">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 space-y-10">
+        <section class="grid md:grid-cols-2 gap-10 items-start">
+          <div class="space-y-4">
+            <p
+              class="text-xs font-medium tracking-wide text-gray-500 uppercase"
+            >
+              Featured Fullstack Laravel Project
+            </p>
+            <h1 class="text-3xl md:text-4xl font-semibold text-gray-900">
+              POS System
+            </h1>
+            <p class="text-sm text-gray-500">
+              2024 · Backend & Fullstack Laravel
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Aplikasi Point of Sale (POS) berbasis web yang saya bangun untuk
+              membantu operasional kafe berjalan lebih tertata: dari pencatatan
+              pesanan, pengelolaan menu dan meja, hingga proses pembayaran dan
+              pengaturan hak akses pengguna.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs text-gray-600">
+              <span class="bg-gray-100 px-2 py-1 rounded">Laravel</span>
+              <span class="bg-gray-100 px-2 py-1 rounded">MySQL</span>
+              <span class="bg-gray-100 px-2 py-1 rounded">Livewire</span>
+              <span class="bg-gray-100 px-2 py-1 rounded">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="rounded-2xl overflow-hidden bg-gray-100 shadow-sm">
+            <img
+              src="../images/pos.png"
+              alt="POS System screenshot"
+              class="w-full h-64 md:h-80 object-cover"
+            />
+          </div>
+        </section>
+
+        <section class="grid md:grid-cols-3 gap-10">
+          <div class="md:col-span-2 space-y-4">
+            <h2 class="text-xl font-medium text-gray-900">Project overview</h2>
+            <p class="text-gray-600 leading-relaxed">
+              POS Kafe dirancang sebagai satu aplikasi terpusat untuk kasir, dapur,
+              dan admin. Fokusnya adalah membuat alur transaksi di kafe kecil hingga
+              menengah terasa cepat, minim salah hitung, dan mudah dipantau.
+            </p>
+            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+              <li>Kasir memproses pesanan dine-in maupun take-away dengan alur yang jelas.</li>
+              <li>Pemilik kafe melihat ringkasan penjualan harian tanpa perlu export manual.</li>
+              <li>Dapur menerima pesanan terstruktur lengkap dengan catatan khusus pelanggan.</li>
+              <li>Admin mengatur menu, meja, dan metode pembayaran dari satu dashboard.</li>
+            </ul>
+          </div>
+          <aside class="space-y-4 text-sm text-gray-600">
+            <div>
+              <h3
+                class="text-xs font-semibold tracking-wide text-gray-500 uppercase mb-1"
+              >
+                Role
+              </h3>
+              <p>Fullstack Laravel (backend + basic frontend).</p>
+            </div>
+            <div>
+              <h3
+                class="text-xs font-semibold tracking-wide text-gray-500 uppercase mb-1"
+              >
+                Tech
+              </h3>
+              <ul class="space-y-1 list-disc list-inside">
+                <li>Laravel, Blade / Livewire.</li>
+                <li>MySQL, Eloquent ORM.</li> 
+              </ul>
+            </div>
+          </aside>
+        </section>
+
+        <section class="space-y-8">
+          <h2 class="text-xl font-medium text-gray-900">Fitur utama</h2>
+          <div class="grid md:grid-cols-2 gap-8 text-sm text-gray-600">
+            <div class="space-y-2">
+              <h3 class="text-sm font-semibold text-gray-900">Modul Kasir</h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Dashboard kasir untuk melihat status meja dan ringkasan transaksi hari ini.</li>
+                <li>Layar POS yang ringan: pilih tipe order, meja, dan menu dalam beberapa langkah.</li>
+                <li>Total, pajak, dan service charge dihitung otomatis tanpa hitung manual.</li>
+                <li>Order bisa disimpan sebagai draft atau langsung diselesaikan pembayarannya.</li>
+                <li>Dukungan split bill agar pelanggan yang bayar terpisah tetap tercatat rapi.</li>
+              </ul>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-sm font-semibold text-gray-900">Modul Dapur (KDS)</h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Tampilan dapur yang mengelompokkan pesanan per meja atau invoice.</li>
+                <li>Status setiap item jelas: menunggu, dimasak, siap, atau sudah diantar.</li>
+                <li>Koki mengubah status langsung dari layar tanpa perlu tiket kertas.</li>
+                <li>Daftar pesanan diperbarui otomatis sehingga dapur melihat data terbaru.</li>
+                <li>Catatan seperti tingkat pedas atau permintaan khusus tercatat di setiap item.</li>
+              </ul>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-sm font-semibold text-gray-900">Modul Admin</h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Dashboard ringkas untuk memantau performa penjualan per periode.</li>
+                <li>Pengelolaan menu, kategori, meja, dan metode pembayaran dalam satu halaman.</li>
+                <li>Pengaturan akun dan hak akses untuk kasir, dapur, dan admin.</li>
+                <li>Riwayat transaksi yang bisa difilter untuk kebutuhan rekapan dan laporan.</li>
+              </ul>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-sm font-semibold text-gray-900">Karakteristik teknis</h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>State POS tetap aman saat halaman di-refresh sehingga konteks order tidak hilang.</li>
+                <li>Logika bisnis dipisah ke service layer agar struktur kode tetap bersih.</li>
+                <li>Pengalaman penggunaan mendekati SPA berkat Livewire, tanpa framework frontend tambahan.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

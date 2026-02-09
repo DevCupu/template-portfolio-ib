@@ -33,6 +33,85 @@ function type() {
 }
 type();
 
+// Language switcher (EN / ID)
+const langButtons = document.querySelectorAll(".lang-switch");
+
+const translations = {
+  en: {
+    "nav.home": "Home",
+    "nav.about": "About",
+    "nav.work": "Work",
+    "nav.blog": "Blog",
+    "nav.contact": "Contact",
+    "section.about": "About",
+    "section.work": "Work",
+    "hero.subtitle":
+      "I create digital experiences that are simple, beautiful, and functional.",
+    "about.description":
+      "Junior Backend Developer focused on building Laravel-based systems and RESTful APIs. Experienced in database design, authentication, Docker, and deploying services to AWS and GCP. Currently learning Golang for scalable, high-performance backend architectures.",
+  },
+  id: {
+    "nav.home": "Beranda",
+    "nav.about": "Tentang",
+    "nav.work": "Karya",
+    "nav.blog": "Blog",
+    "nav.contact": "Kontak",
+    "section.about": "Tentang",
+    "section.work": "Karya",
+    "hero.subtitle":
+      "Saya membangun pengalaman digital yang sederhana, indah, dan fungsional.",
+    "about.description":
+      "Junior Backend Developer yang fokus membangun sistem berbasis Laravel dan RESTful API. Berpengalaman di desain database, autentikasi, Docker, dan deployment ke AWS maupun GCP. Saat ini belajar Golang untuk arsitektur backend yang skalabel dan high-performance.",
+  },
+};
+
+function applyTranslations(lang) {
+  const dict = translations[lang] || translations.en;
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (dict[key]) {
+      el.textContent = dict[key];
+    }
+  });
+}
+
+function setLanguage(lang) {
+  // Update <html lang="..."> attribute
+  document.documentElement.setAttribute("lang", lang);
+
+  // Update active state for buttons
+  langButtons.forEach((btn) => {
+    const isActive = btn.dataset.lang === lang;
+    btn.classList.toggle("bg-gray-900", isActive);
+    btn.classList.toggle("text-white", isActive);
+    btn.classList.toggle("text-gray-500", !isActive);
+  });
+
+  applyTranslations(lang);
+
+  try {
+    localStorage.setItem("lang", lang);
+  } catch (e) {
+    // ignore storage errors
+  }
+}
+
+if (langButtons.length) {
+  const savedLang =
+    (typeof localStorage !== "undefined" && localStorage.getItem("lang")) ||
+    document.documentElement.lang ||
+    "en";
+
+  setLanguage(savedLang);
+
+  langButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const targetLang = btn.dataset.lang || "en";
+      setLanguage(targetLang);
+    });
+  });
+}
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {

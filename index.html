@@ -29,33 +29,56 @@
               href="#home"
               class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors nav-item"
             >
-              <i data-feather="home" class="w-4 h-4"></i> Home
+              <i data-feather="home" class="w-4 h-4"></i>
+              <span data-i18n="nav.home">Home</span>
             </a>
             <a
               href="#about"
               class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors nav-item"
             >
-              <i data-feather="user" class="w-4 h-4"></i> About
+              <i data-feather="user" class="w-4 h-4"></i>
+              <span data-i18n="nav.about">About</span>
             </a>
             <a
               href="#work"
               class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors nav-item"
             >
-              <i data-feather="briefcase" class="w-4 h-4"></i> Work
+              <i data-feather="briefcase" class="w-4 h-4"></i>
+              <span data-i18n="nav.work">Work</span>
             </a>
             <a
               href="#blog"
               class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors nav-item"
             >
-              <i data-feather="book-open" class="w-4 h-4"></i> Blog
+              <i data-feather="book-open" class="w-4 h-4"></i>
+              <span data-i18n="nav.blog">Blog</span>
             </a>
             <a
               href="#contact"
               class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors nav-item"
             >
-              <i data-feather="mail" class="w-4 h-4"></i> Contact
+              <i data-feather="mail" class="w-4 h-4"></i>
+              <span data-i18n="nav.contact">Contact</span>
             </a>
           </nav>
+          <!-- Language switcher (desktop) -->
+          <div class="hidden md:flex items-center gap-2 text-xs font-medium text-gray-500">
+            <button
+              type="button"
+              class="lang-switch px-2 py-1 rounded border border-transparent hover:border-gray-300 text-gray-500"
+              data-lang="id"
+            >
+              ID
+            </button>
+            <span class="w-px h-4 bg-gray-300"></span>
+            <button
+              type="button"
+              class="lang-switch px-2 py-1 rounded border border-transparent hover:border-gray-300 text-gray-500"
+              data-lang="en"
+            >
+              EN
+            </button>
+          </div>
           <!-- Mobile menu button -->
           <button
             id="mobile-menu-btn"
@@ -75,35 +98,58 @@
         >
           <nav class="pb-6">
             <div class="flex flex-col space-y-6">
+              <!-- Language switcher (mobile) -->
+              <div class="flex items-center gap-3 pt-1">
+                <span class="text-xs text-gray-500">Language</span>
+                <button
+                  type="button"
+                  class="lang-switch text-xs px-2 py-1 rounded border border-transparent hover:border-gray-300 text-gray-500"
+                  data-lang="id"
+                >
+                  ID
+                </button>
+                <button
+                  type="button"
+                  class="lang-switch text-xs px-2 py-1 rounded border border-transparent hover:border-gray-300 text-gray-500"
+                  data-lang="en"
+                >
+                  EN
+                </button>
+              </div>
               <a
                 href="#home"
                 class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors mobile-nav-item"
               >
-                <i data-feather="home" class="w-4 h-4"></i> Home
+                <i data-feather="home" class="w-4 h-4"></i>
+                <span data-i18n="nav.home">Home</span>
               </a>
               <a
                 href="#about"
                 class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors mobile-nav-item"
               >
-                <i data-feather="user" class="w-4 h-4"></i> About
+                <i data-feather="user" class="w-4 h-4"></i>
+                <span data-i18n="nav.about">About</span>
               </a>
               <a
                 href="#work"
                 class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors mobile-nav-item"
               >
-                <i data-feather="briefcase" class="w-4 h-4"></i> Work
+                <i data-feather="briefcase" class="w-4 h-4"></i>
+                <span data-i18n="nav.work">Work</span>
               </a>
               <a
                 href="#blog"
                 class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors mobile-nav-item"
               >
-                <i data-feather="book-open" class="w-4 h-4"></i> Blog
+                <i data-feather="book-open" class="w-4 h-4"></i>
+                <span data-i18n="nav.blog">Blog</span>
               </a>
               <a
                 href="#contact"
                 class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors mobile-nav-item"
               >
-                <i data-feather="mail" class="w-4 h-4"></i> Contact
+                <i data-feather="mail" class="w-4 h-4"></i>
+                <span data-i18n="nav.contact">Contact</span>
               </a>
             </div>
           </nav>
@@ -125,6 +171,7 @@
 
         <p
           class="text-lg md:text-xl text-gray-500 mb-16 max-w-2xl mx-auto leading-relaxed hero-subtitle"
+          data-i18n="hero.subtitle"
         >
           I create digital experiences that are simple, beautiful, and
           functional.
@@ -142,20 +189,25 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-10 bg-white">
       <div class="max-w-4xl mx-auto px-6 lg:px-8">
-        <div class="grid md:grid-cols-2 gap-16">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
           <div class="fade-in-left">
-            <h2 class="text-2xl font-light text-gray-900 mb-8">About</h2>
-            <p class="text-gray-600 leading-relaxed mb-6">
-              I'm a full-stack developer with 5+ years of experience building
-              web applications. I focus on creating clean, efficient solutions
-              that solve real problems.
-            </p>
-            <p class="text-gray-600 leading-relaxed">
-              When I'm not coding, I enjoy exploring new technologies,
-              contributing to open-source projects, and sharing knowledge
-              through writing.
+            <h2
+              class="text-2xl font-light text-gray-900 mb-8"
+              data-i18n="section.about"
+            >
+              About
+            </h2>
+            <div class="mb-6 flex md:block justify-center"></div>
+            <p
+              class="text-gray-600 leading-relaxed mb-6"
+              data-i18n="about.description"
+            >
+              Junior Backend Developer focused on building Laravel-based systems
+              and RESTful APIs. Experienced in database design, authentication,
+              Docker, and deploying services to AWS and GCP. Currently learning
+              Golang for scalable, high-performance backend architectures.
             </p>
           </div>
           <div class="fade-in-right">
@@ -172,7 +224,7 @@
                   <i data-feather="monitor" class="w-4 h-4"></i> Frontend
                 </h4>
                 <p class="text-sm text-gray-600">
-                  React, Next.js, TypeScript, Tailwind CSS
+                  Tailwind CSS, Livewire 3, Bootstrap 5.
                 </p>
               </div>
               <div class="fade-in stagger-2">
@@ -182,7 +234,7 @@
                   <i data-feather="server" class="w-4 h-4"></i> Backend
                 </h4>
                 <p class="text-sm text-gray-600">
-                  Node.js, Python, PostgreSQL, MongoDB
+                  Laravel 12, Node.js, Go, MySQL.
                 </p>
               </div>
               <div class="fade-in stagger-3">
@@ -191,7 +243,9 @@
                 >
                   <i data-feather="tool" class="w-4 h-4"></i> Tools
                 </h4>
-                <p class="text-sm text-gray-600">Git, Docker, AWS, Vercel</p>
+                <p class="text-sm text-gray-600">
+                  Git, Docker, AWS, GCP, Postman.
+                </p>
               </div>
             </div>
           </div>
@@ -203,136 +257,78 @@
     <section id="work" class="py-20 bg-gray-50">
       <div class="max-w-4xl mx-auto px-6 lg:px-8">
         <h2
-          class="text-2xl font-light text-gray-900 mb-16 fade-in flex items-center gap-2"
+          class="text-2xl font-light text-gray-900 mb-10 fade-in flex items-center gap-2"
         >
-          <i data-feather="folder" class="w-5 h-5"></i> Selected Work
+          <i data-feather="folder" class="w-5 h-5"></i>
+          <span data-i18n="section.work">Work</span>
         </h2>
+
         <div class="space-y-16">
-          <!-- ... (work cards remain unchanged, icons not necessary here) ... -->
-          <!-- Copy your work cards here -->
+          <!-- Featured Fullstack Laravel Projects (paling atas) -->
+          <section class="space-y-6">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg md:text-2xl font-semibold text-gray-500">
+                Featured Projects
+              </h3>
+            </div>
+            <div class="grid md:grid-cols-2 gap-10">
+              <!-- POS System -->
+              <article
+                class="project-card fade-in stagger-1 border-b border-gray-200 pb-6"
+              >
+                <div class="mb-4 overflow-hidden rounded-xl bg-gray-100">
+                  <img
+                    src="images/pos.png"
+                    alt="POS System"
+                    class="w-full h-44 md:h-52 object-cover"
+                  />
+                </div>
+                <h4 class="text-lg font-medium text-gray-900 mb-1">
+                  POS System
+                </h4>
+                <p class="text-sm text-gray-500 mb-2">
+                  Point of Sale web app.
+                </p>
+                <p class="text-sm text-gray-600 mb-3">
+                Laravel Web-based Point of Sale (POS) untuk manajemen kafe dengan fitur lengkap meliputi manajemen menu, pesanan, meja, pembayaran, dan kontrol akses pengguna.
+                </p>
+                <div class="flex flex-wrap gap-2 text-xs text-gray-500 mb-2">
+                  <span class="bg-gray-100 px-2 py-1 rounded">Laravel 12</span>
+                  <span class="bg-gray-100 px-2 py-1 rounded">MySQL</span>
+                  <span class="bg-gray-100 px-2 py-1 rounded">Livewire 3</span>
+                  <span class="bg-gray-100 px-2 py-1 rounded">Tailwind CSS</span>
+                </div>
+                <div class="flex flex-col space-y-2 mt-2">
+                  <a
+                    href="projects/project-pos.html"
+                    class="view-project-btn flex items-center gap-2 text-xs text-gray-900 pb-1 hover:border-gray-400 transition-all duration-300 nav-item">
+                    <i data-feather="external-link" class="w-4 h-4"></i>
+                    View details
+                  </a>
+                  <a
+                    href="https://github.com/DevCupu/laravel-pos-system" target="_blank" rel="noopener"
+                    class="view-project-btn flex items-center gap-2 text-xs text-gray-900 pb-1 hover:border-gray-400 transition-all duration-300 nav-item">
+                    <i data-feather="external-link" class="w-4 h-4"></i>
+                    View on GitHub
+                  </a>
+                </div>
+              </article>
+          </section>
+
+          <!-- More Projects link -->
           <div
-            class="border-b border-gray-200 pb-16 project-card fade-in stagger-1"
+            class="pt-4 border-t border-dashed border-gray-200 flex justify-between items-center"
           >
-            <div class="grid md:grid-cols-3 gap-8">
-              <div>
-                <h3 class="text-lg font-medium text-gray-900 mb-2">
-                  E-Commerce Platform
-                </h3>
-                <p class="text-sm text-gray-500">2024</p>
-              </div>
-              <div class="md:col-span-2">
-                <p class="text-gray-600 mb-4 leading-relaxed">
-                  Full-stack e-commerce solution with user authentication and
-                  payment processing.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span
-                    class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded tech-tag"
-                    style="animation-delay: 0s"
-                    >Next.js</span
-                  >
-                  <span
-                    class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded tech-tag"
-                    style="animation-delay: 0.1s"
-                    >PostgreSQL</span
-                  >
-                  <span
-                    class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded tech-tag"
-                    style="animation-delay: 0.2s"
-                    >Stripe</span
-                  >
-                </div>
-                <a
-                  href="#"
-                  class="flex items-center gap-2 text-sm text-gray-900 border-b border-gray-900 pb-1 hover:border-gray-400 transition-all duration-300 nav-item"
-                >
-                  <i data-feather="external-link" class="w-4 h-4"></i> View
-                  project
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            class="border-b border-gray-200 pb-16 project-card fade-in stagger-2"
-          >
-            <div class="grid md:grid-cols-3 gap-8">
-              <div>
-                <h3 class="text-lg font-medium text-gray-900 mb-2">
-                  Task Management App
-                </h3>
-                <p class="text-sm text-gray-500">2023</p>
-              </div>
-              <div class="md:col-span-2">
-                <p class="text-gray-600 mb-4 leading-relaxed">
-                  Collaborative task management with real-time updates and team
-                  features.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span
-                    class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded tech-tag"
-                    style="animation-delay: 0s"
-                    >React</span
-                  >
-                  <span
-                    class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded tech-tag"
-                    style="animation-delay: 0.1s"
-                    >Node.js</span
-                  >
-                  <span
-                    class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded tech-tag"
-                    style="animation-delay: 0.2s"
-                    >Socket.io</span
-                  >
-                </div>
-                <a
-                  href="#"
-                  class="flex items-center gap-2 text-sm text-gray-900 border-b border-gray-900 pb-1 hover:border-gray-400 transition-all duration-300 nav-item"
-                >
-                  <i data-feather="external-link" class="w-4 h-4"></i> View
-                  project
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="pb-16 project-card fade-in stagger-3">
-            <div class="grid md:grid-cols-3 gap-8">
-              <div>
-                <h3 class="text-lg font-medium text-gray-900 mb-2">
-                  Weather Dashboard
-                </h3>
-                <p class="text-sm text-gray-500">2023</p>
-              </div>
-              <div class="md:col-span-2">
-                <p class="text-gray-600 mb-4 leading-relaxed">
-                  Responsive weather dashboard with data visualizations and
-                  forecasts.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span
-                    class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded tech-tag"
-                    style="animation-delay: 0s"
-                    >Vue.js</span
-                  >
-                  <span
-                    class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded tech-tag"
-                    style="animation-delay: 0.1s"
-                    >Chart.js</span
-                  >
-                  <span
-                    class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded tech-tag"
-                    style="animation-delay: 0.2s"
-                    >API</span
-                  >
-                </div>
-                <a
-                  href="#"
-                  class="flex items-center gap-2 text-sm text-gray-900 border-b border-gray-900 pb-1 hover:border-gray-400 transition-all duration-300 nav-item"
-                >
-                  <i data-feather="external-link" class="w-4 h-4"></i> View
-                  project
-                </a>
-              </div>
-            </div>
+            <p class="text-sm text-gray-600">
+              Masih banyak project lain. Lihat daftar lengkapnya.
+            </p>
+            <a
+              href="projects/index.html"
+              class="flex items-center gap-2 text-sm text-gray-900 border-b border-gray-900 pb-1 hover:border-gray-400 transition-all duration-300 nav-item"
+            >
+              <i data-feather="layers" class="w-4 h-4"></i>
+              More projects
+            </a>
           </div>
         </div>
       </div>

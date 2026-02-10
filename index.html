@@ -19,9 +19,9 @@
         <div class="flex justify-between items-center py-6">
           <a
             href="#"
-            class="text-lg font-medium text-gray-900 transition-all duration-300 hover:opacity-70"
+            class="flex items-center gap-3 text-lg font-medium text-gray-900 transition-all duration-300 hover:opacity-70"
           >
-            Ib
+            <span>Ib</span>
           </a>
           <!-- Desktop Navigation -->
           <nav class="hidden md:flex space-x-12">
@@ -194,16 +194,29 @@
     <section id="about" class="py-10 bg-white">
       <div class="max-w-4xl mx-auto px-6 lg:px-8">
         <div class="grid md:grid-cols-2 gap-16 items-center">
-          <div class="fade-in-left">
+          <!-- Left: Bigger portrait photo -->
+          <div class="fade-in-left flex justify-center md:justify-start">
+            <div
+              class="w-48 h-64 md:w-64 md:h-80 rounded-2xl overflow-hidden border border-gray-200 shadow-lg bg-gray-100"
+            >
+              <img
+                src="images/bdc9f8a0-18a1-4e95-9035-d17e06cd11fd.jpeg"
+                alt="Portrait photo of Ib"
+                class="w-full h-full object-cover filter saturate-50 transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+          </div>
+
+          <!-- Right: About text + Skills -->
+          <div class="fade-in-right">
             <h2
-              class="text-2xl font-light text-gray-900 mb-8"
+              class="text-2xl font-light text-gray-900 mb-4"
               data-i18n="section.about"
             >
               About
             </h2>
-            <div class="mb-6 flex md:block justify-center"></div>
             <p
-              class="text-gray-600 leading-relaxed mb-6"
+              class="text-gray-600 leading-relaxed mb-8"
               data-i18n="about.description"
             >
               Junior Backend Developer focused on building Laravel-based systems
@@ -211,8 +224,7 @@
               Docker, and deploying services to AWS and GCP. Currently learning
               Golang for scalable, high-performance backend architectures.
             </p>
-          </div>
-          <div class="fade-in-right">
+
             <h3
               class="text-lg font-medium text-gray-900 mb-6 flex items-center gap-2"
             >
@@ -307,6 +319,7 @@
                   <span class="bg-gray-100 px-2 py-1 rounded">GCP</span>
                   <span class="bg-gray-100 px-2 py-1 rounded">Cloud Run</span>
                   <span class="bg-gray-100 px-2 py-1 rounded">Firestore</span>
+                  <span class="bg-gray-100 px-2 py-1 rounded">Docker</span>
                 </div>
                 <div class="flex flex-col space-y-2 mt-2">
                   <a
@@ -403,7 +416,7 @@
         <h2
           class="text-2xl font-light text-gray-900 mb-16 fade-in flex items-center gap-2"
         >
-          <i data-feather="edit-3" class="w-5 h-5"></i> Latest Articles
+          <i data-feather="edit-3" class="w-5 h-5"></i> Cloud & Deployment Notes
         </h2>
         <div class="space-y-12">
           <article
@@ -420,11 +433,13 @@
                 <h3
                   class="text-lg font-medium text-gray-900 mb-3 hover:text-gray-600 transition-colors"
                 >
-                  <a href="#">Getting Started with Next.js 14</a>
+                  <a href="#">Mendeploy REST API ke Google Cloud Run</a>
                 </h3>
                 <p class="text-gray-600 leading-relaxed">
-                  Learn how to build modern web applications with the latest
-                  features in Next.js 14.
+                  Catatan singkat bagaimana saya membungkus backend Express.js
+                  ke dalam container, mengkonfigurasi environment, lalu
+                  mendeploy ke Cloud Run agar bisa diakses tim lain dengan URL
+                  yang stabil dan aman.
                 </p>
               </div>
             </div>
@@ -443,11 +458,13 @@
                 <h3
                   class="text-lg font-medium text-gray-900 mb-3 hover:text-gray-600 transition-colors"
                 >
-                  <a href="#">Mastering Tailwind CSS</a>
+                  <a href="#">Menyusun Arsitektur Backend yang Cloud-ready</a>
                 </h3>
                 <p class="text-gray-600 leading-relaxed">
-                  A comprehensive guide to building beautiful, responsive
-                  designs with Tailwind CSS.
+                  Sharing pendek tentang bagaimana saya memisahkan layer bisnis,
+                  konfigurasi, dan koneksi database sehingga backend lebih mudah
+                  dipindahkan antar environment (local, staging, hingga
+                  production di cloud).
                 </p>
               </div>
             </div>
@@ -464,11 +481,15 @@
                 <h3
                   class="text-lg font-medium text-gray-900 mb-3 hover:text-gray-600 transition-colors"
                 >
-                  <a href="#">Building Scalable React Applications</a>
+                  <a href="#"
+                    >Pengalaman Menggunakan Cloud Services di Project Bangkit</a
+                  >
                 </h3>
                 <p class="text-gray-600 leading-relaxed">
-                  Best practices for structuring and organizing large React
-                  applications.
+                  Ringkasan pengalaman saya memakai layanan GCP (Cloud Run,
+                  Firestore, Cloud Storage) untuk mendukung aplikasi Anem.ai,
+                  mulai dari konfigurasi awal hingga monitoring sederhana untuk
+                  memastikan layanan tetap sehat.
                 </p>
               </div>
             </div>

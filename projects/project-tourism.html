@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Tourism Information System - Ib Portfolio</title>
+		<title>Dante Pine Enrekang Tourism Platform - Ib Portfolio</title>
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script src="https://unpkg.com/feather-icons"></script>
 		<link rel="stylesheet" href="../style.css" />
@@ -30,26 +30,29 @@
 				<section class="grid md:grid-cols-2 gap-10 items-start">
 					<div class="space-y-4">
 						<p class="text-xs font-medium tracking-wide text-gray-500 uppercase">
-							Featured Laravel Project
+							Featured Laravel Platform
 						</p>
 						<h1 class="text-3xl md:text-4xl font-semibold text-gray-900">
-							Tourism Information System
+							Dante Pine Enrekang – Tourism & Booking Platform
 						</h1>
-						<p class="text-sm text-gray-500">2023 · Laravel</p>
+						<p class="text-sm text-gray-500">2024 · Laravel 12 · Production-ready</p>
 						<p class="text-gray-600 leading-relaxed">
-							Portal informasi destinasi wisata yang menampilkan detail tempat, galeri foto,
-							dan paket perjalanan sederhana.
+							Landing page pariwisata sekaligus portal admin untuk mengelola konten wisata,
+							aktivitas, paket camping, menu kafe, dan sistem booking terpusat berbasis
+							fasilitas di Dante Pine Enrekang.
 						</p>
 						<div class="flex flex-wrap gap-2 text-xs text-gray-600">
-							<span class="bg-gray-100 px-2 py-1 rounded">Laravel</span>
-							<span class="bg-gray-100 px-2 py-1 rounded">REST API</span>
-							<span class="bg-gray-100 px-2 py-1 rounded">MySQL</span>
+							<span class="bg-gray-100 px-2 py-1 rounded">Laravel 12</span>
+							<span class="bg-gray-100 px-2 py-1 rounded">Blade & Tailwind</span>
+							<span class="bg-gray-100 px-2 py-1 rounded">MySQL/MariaDB</span>
+							<span class="bg-gray-100 px-2 py-1 rounded">Booking System</span>
+							<span class="bg-gray-100 px-2 py-1 rounded">Admin Panel</span>
 						</div>
 					</div>
 					<div class="rounded-2xl overflow-hidden bg-gray-100 shadow-sm">
 						<img
-							src="../images/tourism-information.jpg"
-							alt="Tourism Information System screenshot"
+							src="../images/2892faf0-c2e9-4f25-bd86-b8676b6f9d6f.png"
+							alt="Dante Pine Enrekang tourism and booking platform"
 							class="w-full h-64 md:h-80 object-cover"
 						/>
 					</div>
@@ -59,31 +62,45 @@
 					<div class="md:col-span-2 space-y-4">
 						<h2 class="text-xl font-medium text-gray-900">Project overview</h2>
 						<p class="text-gray-600 leading-relaxed">
-							Admin dapat menambahkan destinasi, deskripsi, dan foto. Pengguna dapat
-							mencari dan melihat detail tempat wisata serta mengirim permintaan reservasi
-							sederhana.
+							Proyek ini memodernisasi platform pariwisata Dante Pine menjadi satu sistem
+							terintegrasi: pengunjung mendapatkan landing page yang informatif, sedangkan tim
+							internal memiliki dashboard admin untuk mengelola semua konten dan booking dari
+							satu tempat.
 						</p>
 						<ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
-							<li>Manajemen destinasi dan kategori.</li>
-							<li>Halaman detail dengan galeri foto.</li>
-							<li>Form kontak / booking sederhana.</li>
+							<li>Landing page publik: Home, Aktivitas, Paket Camping, Menu kafe, dan Booking.</li>
+							<li>Portal admin untuk mengelola aktivitas, menu, spot foto, fasilitas umum,
+								About, dan paket camping.</li>
+							<li>Satu sumber data booking (tabel facilities) yang digunakan berbagai jenis
+								wahana/paket agar penghitungan kuota tetap konsisten.</li>
+							<li>Form booking dengan pengecekan kapasitas per hari dan kode booking unik
+								untuk pelacakan status.</li>
 						</ul>
+						<p class="text-gray-600 leading-relaxed">
+							Secara arsitektur, saya memisahkan model konten publik (seperti spot foto dan
+							fasilitas umum) dari objek yang benar-benar dapat dibooking. Ini membuat sistem
+							lebih fleksibel saat Dante Pine menambah wahana atau jenis paket baru tanpa
+							mengganggu logika booking utama.
+						</p>
 					</div>
 					<aside class="space-y-4 text-sm text-gray-600">
 						<div>
 							<h3 class="text-xs font-semibold tracking-wide text-gray-500 uppercase mb-1">
 								Role
 							</h3>
-							<p>Backend Laravel dan basic halaman publik.</p>
+							<p>
+								Backend Laravel, desain skema database, alur booking berbasis fasilitas,
+								dan sebagian besar halaman admin & publik.
+							</p>
 						</div>
 						<div>
 							<h3 class="text-xs font-semibold tracking-wide text-gray-500 uppercase mb-1">
 								Tech
 							</h3>
 							<ul class="space-y-1 list-disc list-inside">
-								<li>Laravel, Blade.</li>
-								<li>MySQL.</li>
-								<li>REST API untuk konsumsi data destinasi.</li>
+								<li>Laravel 12, PHP 8.2, Blade.</li>
+								<li>Tailwind CSS, sedikit Alpine-style interaksi.</li>
+								<li>MySQL/MariaDB dengan relasi polymorphic untuk fasilitas & booking.</li>
 							</ul>
 						</div>
 					</aside>

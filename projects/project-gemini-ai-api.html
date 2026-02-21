@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini AI API Project - Ib Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body class="bg-white text-gray-900">
+    <header
+      class="border-b border-gray-100 bg-white/90 backdrop-blur-sm sticky top-0 z-40"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between"
+      >
+        <a
+          href="../index.html"
+          class="text-lg font-medium text-gray-900 hover:opacity-70 transition"
+          >Ib</a
+        >
+        <nav class="flex items-center gap-4 text-sm text-gray-600">
+          <a
+            href="../index.html#work"
+            class="flex items-center gap-1 hover:text-gray-900 transition-colors"
+          >
+            <i data-feather="arrow-left" class="w-4 h-4"></i>
+            Back to work
+          </a>
+          <a
+            href="./index.html"
+            class="flex items-center gap-1 hover:text-gray-900 transition-colors"
+          >
+            <i data-feather="layers" class="w-4 h-4"></i>
+            All projects
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="py-12 md:py-16">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 space-y-10">
+        <section class="grid md:grid-cols-2 gap-10 items-start">
+          <div class="space-y-4">
+            <p
+              class="text-xs font-medium tracking-wide text-gray-500 uppercase"
+            >
+              AI API Integration
+            </p>
+            <h1 class="text-3xl md:text-4xl font-semibold text-gray-900">
+              Gemini AI API Project
+            </h1>
+            <p class="text-sm text-gray-500">
+              Eksperimen integrasi backend dengan Gemini API
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Project ini berfokus pada cara memanggil Gemini API dari backend,
+              mengelola API key dengan aman, dan menyusun wrapper function yang
+              mudah digunakan oleh layer aplikasi lain.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs text-gray-600">
+              <span class="bg-gray-100 px-2 py-1 rounded">Gemini API</span>
+              <span class="bg-gray-100 px-2 py-1 rounded">Node.js</span>
+              <span class="bg-gray-100 px-2 py-1 rounded">Backend</span>
+            </div>
+          </div>
+          <div class="rounded-2xl overflow-hidden bg-gray-100 shadow-sm">
+            <img
+              src="../images/Gemini_Generated_Image_ia8cdcia8cdcia8c.png"
+              alt="Ilustrasi integrasi backend dengan Gemini AI API"
+              class="w-full h-64 md:h-80 object-cover"
+            />
+          </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-10">
+          <div class="space-y-4">
+            <h2 class="text-xl font-medium text-gray-900">Fitur utama</h2>
+            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+              <li>Wrapper backend untuk memanggil Gemini API.</li>
+              <li>Konfigurasi API key melalui environment variable.</li>
+              <li>Penanganan error sederhana saat request gagal.</li>
+            </ul>
+          </div>
+          <div class="space-y-4">
+            <h2 class="text-xl font-medium text-gray-900">Tech stack</h2>
+            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+              <li>Node.js sebagai backend.</li>
+              <li>HTTP client (fetch/axios) untuk memanggil Gemini.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

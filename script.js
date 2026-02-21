@@ -33,85 +33,6 @@ function type() {
 }
 type();
 
-// Language switcher (EN / ID)
-const langButtons = document.querySelectorAll(".lang-switch");
-
-const translations = {
-  en: {
-    "nav.home": "Home",
-    "nav.about": "About",
-    "nav.work": "Work",
-    "nav.blog": "Blog",
-    "nav.contact": "Contact",
-    "section.about": "About",
-    "section.work": "Work",
-    "hero.subtitle":
-      "I create digital experiences that are simple, beautiful, and functional.",
-    "about.description":
-      "Junior Backend Developer focused on building Laravel-based systems and RESTful APIs. Experienced in database design, authentication, Docker, and deploying services to AWS and GCP. Currently learning Golang for scalable, high-performance backend architectures.",
-  },
-  id: {
-    "nav.home": "Beranda",
-    "nav.about": "Tentang",
-    "nav.work": "Karya",
-    "nav.blog": "Blog",
-    "nav.contact": "Kontak",
-    "section.about": "Tentang",
-    "section.work": "Karya",
-    "hero.subtitle":
-      "Saya membangun pengalaman digital yang sederhana, indah, dan fungsional.",
-    "about.description":
-      "Junior Backend Developer yang fokus membangun sistem berbasis Laravel dan RESTful API. Berpengalaman di desain database, autentikasi, Docker, dan deployment ke AWS maupun GCP. Saat ini belajar Golang untuk arsitektur backend yang skalabel dan high-performance.",
-  },
-};
-
-function applyTranslations(lang) {
-  const dict = translations[lang] || translations.en;
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    if (dict[key]) {
-      el.textContent = dict[key];
-    }
-  });
-}
-
-function setLanguage(lang) {
-  // Update <html lang="..."> attribute
-  document.documentElement.setAttribute("lang", lang);
-
-  // Update active state for buttons
-  langButtons.forEach((btn) => {
-    const isActive = btn.dataset.lang === lang;
-    btn.classList.toggle("bg-gray-900", isActive);
-    btn.classList.toggle("text-white", isActive);
-    btn.classList.toggle("text-gray-500", !isActive);
-  });
-
-  applyTranslations(lang);
-
-  try {
-    localStorage.setItem("lang", lang);
-  } catch (e) {
-    // ignore storage errors
-  }
-}
-
-if (langButtons.length) {
-  const savedLang =
-    (typeof localStorage !== "undefined" && localStorage.getItem("lang")) ||
-    document.documentElement.lang ||
-    "en";
-
-  setLanguage(savedLang);
-
-  langButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const targetLang = btn.dataset.lang || "en";
-      setLanguage(targetLang);
-    });
-  });
-}
-
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
@@ -178,6 +99,85 @@ window.addEventListener("scroll", () => {
   }
   lastScrollTop = scrollTop;
 });
+
+// Simple i18n for EN / ID
+const translations = {
+  en: {
+    "nav.home": "Home",
+    "nav.about": "About",
+    "nav.work": "Work",
+    "nav.blog": "Blog",
+    "nav.contact": "Contact",
+    "section.about": "About",
+    "section.work": "Work",
+    "hero.subtitle":
+      "I create digital experiences that are simple, beautiful, and functional.",
+    "about.description":
+      "Junior Backend Developer focused on building Laravel-based systems and RESTful APIs. Experienced in database design, authentication, Docker, and deploying services to AWS and GCP. Currently learning Golang for scalable, high-performance backend architectures.",
+    "work.dante.title": "Dante Pine Enrekang Tourism Platform",
+    "work.dante.subtitle":
+      "Tourism platform for Dante Pine Enrekang with public landing page and admin portal.",
+    "work.dante.description":
+      "This Laravel 12 platform manages tourism content, activities, camping packages, café menu, and a centralized, facility-based booking system. Admins manage everything from the dashboard, while visitors see up-to-date information and place bookings online.",
+  },
+  id: {
+    "nav.home": "Beranda",
+    "nav.about": "Tentang",
+    "nav.work": "Karya",
+    "nav.blog": "Blog",
+    "nav.contact": "Kontak",
+    "section.about": "Tentang",
+    "section.work": "Karya",
+    "hero.subtitle":
+      "Saya membuat pengalaman digital yang sederhana, indah, dan fungsional.",
+    "about.description":
+      "Junior Backend Developer yang fokus membangun sistem berbasis Laravel dan RESTful API. Berpengalaman dalam desain database, autentikasi, Docker, dan deployment layanan ke AWS dan GCP. Saat ini sedang mempelajari Golang untuk arsitektur backend yang skalabel dan high-performance.",
+    "work.dante.title": "Laravel Web Pariwisata Dante Pine",
+    "work.dante.subtitle":
+      "Platform pariwisata Dante Pine Enrekang dengan landing page publik dan portal admin.",
+    "work.dante.description":
+      "Sistem ini dibangun dengan Laravel 12 untuk mengelola konten wisata, aktivitas, paket camping, menu kafe, serta sistem booking terpusat berbasis fasilitas. Admin dapat mengatur semua data dari dashboard, sementara pengunjung melihat informasi terbaru dan melakukan pemesanan secara online.",
+  },
+};
+
+function applyTranslations(lang) {
+  const dict = translations[lang];
+  if (!dict) return;
+
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    const text = dict[key];
+    if (text) {
+      el.textContent = text;
+    }
+  });
+
+  document.documentElement.setAttribute("data-lang", lang);
+  try {
+    localStorage.setItem("preferred_lang", lang);
+  } catch (e) {
+    // ignore storage errors
+  }
+}
+
+document.querySelectorAll(".lang-switch").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const lang = btn.getAttribute("data-lang");
+    applyTranslations(lang);
+  });
+});
+
+// Apply saved or default language on load
+let initialLang = "en";
+try {
+  const stored = localStorage.getItem("preferred_lang");
+  if (stored && translations[stored]) {
+    initialLang = stored;
+  }
+} catch (e) {
+  // ignore storage errors
+}
+applyTranslations(initialLang);
 
 // Form submission
 document.querySelector("form").addEventListener("submit", (e) => {

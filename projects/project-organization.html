@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Organization Management System - Ib Portfolio</title>
+		<title>SIORMAWA - Student Organization Management System - Ib Portfolio</title>
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script src="https://unpkg.com/feather-icons"></script>
 		<link rel="stylesheet" href="../style.css" />
@@ -30,68 +30,147 @@
 				<section class="grid md:grid-cols-2 gap-10 items-start">
 					<div class="space-y-4">
 						<p class="text-xs font-medium tracking-wide text-gray-500 uppercase">
-							Featured Fullstack Laravel Project
+							Featured Laravel Platform
 						</p>
 						<h1 class="text-3xl md:text-4xl font-semibold text-gray-900">
-							Organization Management System
+							SIORMAWA – Student Organization Management System
 						</h1>
-						<p class="text-sm text-gray-500">2024 · Backend Laravel</p>
+						<p class="text-sm text-gray-500">2024 · Laravel 12 · In active development (~80%)</p>
 						<p class="text-gray-600 leading-relaxed">
-							Sistem internal untuk mengelola anggota, divisi, jabatan, dan aktivitas
-							organisasi dalam satu dashboard terpusat.
+							SIORMAWA adalah platform digital komprehensif untuk memodernisasi manajemen
+							organisasi kemahasiswaan. Sistem ini memusatkan pengelolaan data anggota,
+							kegiatan, arsip dokumen, dan distribusi informasi dalam satu aplikasi web
+							yang efisien dan transparan.
 						</p>
 						<div class="flex flex-wrap gap-2 text-xs text-gray-600">
-							<span class="bg-gray-100 px-2 py-1 rounded">Laravel</span>
+							<span class="bg-gray-100 px-2 py-1 rounded">Laravel 12</span>
+							<span class="bg-gray-100 px-2 py-1 rounded">Tailwind CSS</span>
+							<span class="bg-gray-100 px-2 py-1 rounded">Vite</span>
 							<span class="bg-gray-100 px-2 py-1 rounded">MySQL</span>
-							<span class="bg-gray-100 px-2 py-1 rounded">Authentication</span>
+							<span class="bg-gray-100 px-2 py-1 rounded">Role-based Access</span>
 						</div>
 					</div>
-					<div class="rounded-2xl overflow-hidden bg-gray-100 shadow-sm">
-						<img
-							src="../images/organization-management.jpg"
-							alt="Organization Management System screenshot"
-							class="w-full h-64 md:h-80 object-cover"
-						/>
-					</div>
+					   <div class="rounded-2xl overflow-hidden bg-gray-100 shadow-sm relative">
+						   <div id="slider-container" class="w-full h-64 md:h-80 relative">
+							   <button id="slider-prev" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 rounded-full p-2 shadow hover:bg-white"><i data-feather="chevron-left"></i></button>
+							   <img id="slider-image" src="../images/siormawa.png" alt="Dashboard SIORMAWA - Sistem Informasi Manajemen Organisasi Mahasiswa" class="w-full h-64 md:h-80 object-cover transition-all duration-300" />
+							   <button id="slider-next" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 rounded-full p-2 shadow hover:bg-white"><i data-feather="chevron-right"></i></button>
+						   </div>
+						   <div id="slider-dots" class="flex justify-center gap-2 py-2"></div>
+					   </div>
 				</section>
 
 				<section class="grid md:grid-cols-3 gap-10">
 					<div class="md:col-span-2 space-y-4">
 						<h2 class="text-xl font-medium text-gray-900">Project overview</h2>
 						<p class="text-gray-600 leading-relaxed">
-							Aplikasi ini membantu organisasi (komunitas, UKM kampus, atau tim internal)
-							untuk menyimpan data anggota, struktur kepengurusan, dan riwayat kegiatan.
+							SIORMAWA dirancang fleksibel untuk skala universitas maupun sekolah. Di
+							universitas, satu Admin Sistem (staff IT) mengelola platform, sementara
+							belasan Admin Organisasi mengurus himpunan/UKM masing-masing. Pada skala
+							sekolah, peran serupa dipegang oleh guru TI dan pembina OSIS/ekstrakurikuler.
 						</p>
 						<ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
-							<li>CRUD anggota, divisi, dan jabatan.</li>
-							<li>Role-based access untuk admin dan anggota biasa.</li>
-							<li>Pencatatan kegiatan dan laporan sederhana.</li>
+							<li>Admin Sistem (Superadmin): manajemen pengguna, organisasi, monitoring,
+								serta pengumuman global.</li>
+							<li>Admin Organisasi: kelola data internal, anggota, kegiatan/event, dan arsip
+								dokumen (proposal, LPJ, surat).</li>
+							<li>Member: melihat info organisasi, mengunduh dokumen, dan mendaftar ke
+								kegiatan dengan akses yang dibatasi.</li>
 						</ul>
+						<p class="text-gray-600 leading-relaxed">
+							Di level database, sistem memakai pendekatan multi-tenancy sederhana: setiap
+							organisasi memiliki data anggota, event, dan dokumennya sendiri. Query di-
+							scope berdasarkan ID organisasi yang terhubung dengan akun admin, sehingga
+							privasi data antar organisasi tetap terjaga tanpa perlu memecah aplikasi.
+						</p>
+						<p class="text-gray-600 leading-relaxed">
+							Struktur tabel inti meliputi <code>users</code>, <code>organizations</code>, <code>members</code>,
+							<code>events</code>, dan <code>documents</code>. Tabel users menyimpan akun login dan role,
+							sementara tabel members menyimpan biodata anggota yang bisa berdiri sendiri
+							meskipun belum memiliki akun login. Hal ini memudahkan pendataan massal
+							tanpa memaksa semua anggota untuk langsung membuat akun.
+						</p>
 					</div>
 					<aside class="space-y-4 text-sm text-gray-600">
 						<div>
 							<h3 class="text-xs font-semibold tracking-wide text-gray-500 uppercase mb-1">
 								Role
 							</h3>
-							<p>Backend & basic frontend Laravel.</p>
+							<p>
+								Perancangan arsitektur backend, desain skema database multi-organisasi,
+								implementasi role & permission dasar, serta halaman dashboard utama.
+							</p>
 						</div>
 						<div>
 							<h3 class="text-xs font-semibold tracking-wide text-gray-500 uppercase mb-1">
 								Tech
 							</h3>
 							<ul class="space-y-1 list-disc list-inside">
-								<li>Laravel, Blade.</li>
-								<li>MySQL, Eloquent ORM.</li>
-								<li>Authentication (guard, middleware).</li>
+								<li>Laravel 12, PHP 8.2, Blade.</li>
+								<li>Tailwind CSS, Vite, komponen layout modular.</li>
+								<li>MySQL dengan relasi terstruktur antar organisasi, member, events,
+									dan documents.</li>
 							</ul>
+						</div>
+						<div>
+							<h3 class="text-xs font-semibold tracking-wide text-gray-500 uppercase mb-1">
+								Development status
+							</h3>
+							<p>
+								Fitur utama sudah berjalan (auth, organisasi, anggota, events, dokumen),
+								dengan beberapa modul lanjutan dan hardening security masih dalam
+								pengembangan (~80%).
+							</p>
 						</div>
 					</aside>
 				</section>
 			</div>
 		</main>
 
-		<script>
-			feather.replace();
-		</script>
+		   <script src="../script.js"></script>
+		   <script>
+			   feather.replace();
+			   // Simple slider logic
+			   let sliderImages = [];
+			   let sliderIndex = 0;
+			   fetch('../projects/slider-images.json')
+				   .then(res => res.json())
+				   .then(images => {
+					   sliderImages = images;
+					   updateSlider();
+					   renderDots();
+				   });
+			   function updateSlider() {
+				   const img = document.getElementById('slider-image');
+				   if (!sliderImages.length) return;
+				   img.src = sliderImages[sliderIndex].src;
+				   img.alt = sliderImages[sliderIndex].alt;
+				   updateDots();
+			   }
+			   function renderDots() {
+				   const dots = document.getElementById('slider-dots');
+				   dots.innerHTML = '';
+				   sliderImages.forEach((_, i) => {
+					   const dot = document.createElement('button');
+					   dot.className = 'w-2 h-2 rounded-full ' + (i === sliderIndex ? 'bg-gray-800' : 'bg-gray-300');
+					   dot.addEventListener('click', () => { sliderIndex = i; updateSlider(); });
+					   dots.appendChild(dot);
+				   });
+			   }
+			   function updateDots() {
+				   const dots = document.getElementById('slider-dots').children;
+				   for (let i = 0; i < dots.length; i++) {
+					   dots[i].className = 'w-2 h-2 rounded-full ' + (i === sliderIndex ? 'bg-gray-800' : 'bg-gray-300');
+				   }
+			   }
+			   document.getElementById('slider-prev').onclick = function() {
+				   sliderIndex = (sliderIndex - 1 + sliderImages.length) % sliderImages.length;
+				   updateSlider();
+			   };
+			   document.getElementById('slider-next').onclick = function() {
+				   sliderIndex = (sliderIndex + 1) % sliderImages.length;
+				   updateSlider();
+			   };
+		   </script>
 	</body>
 </html>

@@ -113,7 +113,7 @@ const translations = {
     "hero.subtitle":
       "I create digital experiences that are simple, beautiful, and functional.",
     "about.description":
-      "Junior Backend Developer focused on building Laravel-based systems and RESTful APIs. Experienced in database design, authentication, Docker, and deploying services to AWS and GCP. Currently learning Golang for scalable, high-performance backend architectures.",
+      "Junior Backend Developer focused on building Laravel-based systems and JavaScript (Express.js) RESTful APIs. Experienced in database design, authentication, Docker, and deploying services to AWS and GCP. Currently learning Golang for scalable, high-performance backend architectures.",
     "work.dante.title": "Dante Pine Enrekang Tourism Platform",
     "work.dante.subtitle":
       "Tourism platform for Dante Pine Enrekang with public landing page and admin portal.",
@@ -131,7 +131,7 @@ const translations = {
     "hero.subtitle":
       "Saya membuat pengalaman digital yang sederhana, indah, dan fungsional.",
     "about.description":
-      "Junior Backend Developer yang fokus membangun sistem berbasis Laravel dan RESTful API. Berpengalaman dalam desain database, autentikasi, Docker, dan deployment layanan ke AWS dan GCP. Saat ini sedang mempelajari Golang untuk arsitektur backend yang skalabel dan high-performance.",
+      "Junior Backend Developer yang fokus membangun sistem berbasis Laravel dan RESTful API dengan JavaScript (Express.js). Berpengalaman dalam desain database, autentikasi, Docker, dan deployment layanan ke AWS dan GCP. Saat ini sedang mempelajari Golang untuk arsitektur backend yang skalabel dan high-performance.",
     "work.dante.title": "Laravel Web Pariwisata Dante Pine",
     "work.dante.subtitle":
       "Platform pariwisata Dante Pine Enrekang dengan landing page publik dan portal admin.",

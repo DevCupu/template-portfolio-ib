@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Malimo Report - Ib Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body class="bg-white text-gray-900">
+    <header
+      class="border-b border-gray-100 bg-white/90 backdrop-blur-sm sticky top-0 z-40"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between"
+      >
+        <a
+          href="../index.html"
+          class="text-lg font-medium text-gray-900 hover:opacity-70 transition"
+          >Ib</a
+        >
+        <nav class="flex items-center gap-4 text-sm text-gray-600">
+          <a
+            href="../index.html#work"
+            class="flex items-center gap-1 hover:text-gray-900 transition-colors"
+          >
+            <i data-feather="arrow-left" class="w-4 h-4"></i>
+            Back to work
+          </a>
+          <a
+            href="./index.html"
+            class="flex items-center gap-1 hover:text-gray-900 transition-colors"
+          >
+            <i data-feather="layers" class="w-4 h-4"></i>
+            All projects
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="py-12 md:py-16">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 space-y-10">
+        <!-- Hero Section -->
+        <section class="grid md:grid-cols-2 gap-10 items-start">
+          <div class="space-y-4">
+            <p
+              class="text-xs font-medium tracking-wide text-gray-500 uppercase"
+            >
+              E-Government / Public Service
+            </p>
+            <h1 class="text-3xl md:text-4xl font-semibold text-gray-900">
+              Malimo Report
+            </h1>
+            <p class="text-sm text-gray-500">
+              2024 Fullstack Platform / Management Pengaduan
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Platform pengaduan masyarakat digital yang dirancang khusus untuk Kelurahan Malimongan. Aplikasi ini memoderasi proses komunikasi antara warga dan pemerintah kelurahan, memastikan setiap keluhan terdokumentasi, diproses secara transparan, dan diselesaikan tepat waktu.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs text-gray-600">
+              <span class="bg-gray-100 px-2 py-1 rounded">Laravel 12</span>
+              <span class="bg-gray-100 px-2 py-1 rounded">Tailwind CSS</span>
+              <span class="bg-gray-100 px-2 py-1 rounded">Vite</span>
+              <span class="bg-gray-100 px-2 py-1 rounded">MySQL</span>
+              <span class="bg-gray-100 px-2 py-1 rounded">Breeze</span>
+            </div>
+          </div>
+          <div class="rounded-2xl overflow-hidden bg-gray-100 shadow-sm transition-transform duration-500 hover:scale-[1.02]">
+            <img
+              src="../images/publik.png"
+              alt="Malimo Report Landing Page"
+              class="w-full h-64 md:h-80 object-cover"
+            />
+          </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section class="grid md:grid-cols-3 gap-10">
+          <div class="md:col-span-2 space-y-4">
+            <h2 class="text-xl font-medium text-gray-900">Project overview</h2>
+            <p class="text-gray-600 leading-relaxed">
+              Malimo Report lahir dari kebutuhan untuk mendigitalisasi layanan pengaduan di tingkat kelurahan yang sebelumnya bersifat manual. Proyek ini berfokus pada kemudahan akses bagi warga dan efisiensi manajemen bagi staf kelurahan.
+            </p>
+            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+              <li>
+                <strong>Reporting Interface:</strong> Antarmuka intuitif bagi warga untuk mengirim laporan secara anonim maupun terdaftar.
+              </li>
+              <li>
+                <strong>Admin Dashboard:</strong> Panel kendali bagi staf kelurahan untuk memverifikasi, menindaklanjuti, dan memantau status laporan.
+              </li>
+              <li>
+                <strong>Status Tracking:</strong> Notifikasi dan visualisasi status laporan (Baru, Diproses, Selesai) secara real-time.
+              </li>
+              <li>
+                <strong>Community Branding:</strong> Desain yang ramah dan inklusif untuk mendorong partisipasi aktif masyarakat.
+              </li>
+            </ul>
+          </div>
+          <aside class="space-y-4 text-sm text-gray-600">
+            <div>
+              <h3
+                class="text-xs font-semibold tracking-wide text-gray-500 uppercase mb-1"
+              >
+                Role
+              </h3>
+              <p>Fullstack Developer.</p>
+            </div>
+            <div>
+              <h3
+                class="text-xs font-semibold tracking-wide text-gray-500 uppercase mb-1"
+              >
+                Focus
+              </h3>
+              <ul class="space-y-1 list-disc list-inside">
+                <li>System Architecture & Database Design.</li>
+                <li>Secure Authentication & Role Management.</li>
+                <li>Responsive UI/UX Development with Tailwind.</li>
+              </ul>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Deep Dive Section -->
+        <section class="grid md:grid-cols-2 gap-10">
+          <div class="space-y-4">
+            <h2 class="text-xl font-medium text-gray-900">Key Features</h2>
+            <p class="text-gray-600 leading-relaxed">
+              Sistem ini dibangun dengan mengutamakan skalabilitas dan keamanan data masyarakat.
+            </p>
+            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+              <li>
+                Autentikasi aman menggunakan Laravel Breeze.
+              </li>
+              <li>
+                Manajemen kategori pengaduan yang dinamis.
+              </li>
+              <li>
+                Upload lampiran (foto/dokumen) sebagai pendukung laporan.
+              </li>
+              <li>
+                Sistem komentar untuk dialog interaktif antara admin dan pelapor.
+              </li>
+              <li>
+                Dashboard statistik untuk melihat tren keluhan di kelurahan.
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-2xl overflow-hidden bg-gray-100 shadow-sm ring-1 ring-gray-200">
+            <img
+              src="../images/admin.png"
+              alt="Malimo Report Admin Dashboard"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </section>
+
+        <!-- Tech Stack & Links -->
+        <section class="grid md:grid-cols-2 gap-10">
+          <div class="space-y-4">
+            <h2 class="text-xl font-medium text-gray-900">Tech stack</h2>
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <h3 class="text-sm font-semibold text-gray-900 mb-1">
+                  Frontend
+                </h3>
+                <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                  <li>Blade Templates</li>
+                  <li>Tailwind CSS</li>
+                  <li>Vite (Bundler)</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-gray-900 mb-1">
+                  Backend
+                </h3>
+                <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                  <li>Laravel 12</li>
+                  <li>MySQL Database</li>
+                  <li>Eloquent ORM</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <h2 class="text-xl font-medium text-gray-900">Links</h2>
+            <p class="text-sm text-gray-600 mb-4">Akses kode sumber dan dokumentasi project.</p>
+            <ul class="list-disc list-inside text-sm text-gray-600 space-y-2">
+              <li>
+                Repository GitHub:
+                <a
+                  href="https://github.com/DevCupu/laravel-project-management-pengaduan-system"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-900 border-b border-gray-900 hover:border-gray-400 pb-0.5 transition-colors font-medium"
+                >
+                  laravel-project-management-pengaduan-system
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="py-12 border-t border-gray-100 mt-20">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
+        <p class="text-sm text-gray-500">© 2026 Ib Portfolio - Crafted with Passion</p>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

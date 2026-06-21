@@ -1,18 +1,21 @@
 <!doctype html>
 <html lang="en">
 	<head>
+  <!--themed-v1-->
+  <script>(function(){try{var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if(t==="dark")document.documentElement.classList.add("dark");}catch(e){}})();</script>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Rental Outdoor System - Ib Portfolio</title>
 		<script src="https://cdn.tailwindcss.com"></script>
-		<script src="https://unpkg.com/feather-icons"></script>
+  <script>tailwind.config={darkMode:"class",theme:{extend:{colors:{accent:"#0066cc",ink:"#1d1d1f",parchment:"#f5f5f7",tile:"#272729"}}}};</script>
+		<script src="../vendor/feather.min.js"></script>
 		<link rel="stylesheet" href="../style.css" />
 	</head>
-	<body class="bg-white text-gray-900">
-		<header class="border-b border-gray-100 bg-white/90 backdrop-blur-sm sticky top-0 z-40">
+	<body class="bg-white text-gray-900 dark:bg-[#0a0a0b] dark:text-white transition-colors duration-500 antialiased">
+		<header class="border-b border-gray-100 dark:border-white/10 bg-white/90 dark:bg-[#0a0a0b]/85 backdrop-blur-sm sticky top-0 z-40">
 			<div class="max-w-5xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
-				<a href="../index.html" class="text-lg font-medium text-gray-900 hover:opacity-70 transition">Ib</a>
-				<nav class="flex items-center gap-4 text-sm text-gray-600">
+				<a href="../index.html" class="text-lg font-medium text-gray-900 dark:text-white hover:opacity-70 transition">Ib</a>
+				<nav class="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-300">
 					<a href="../index.html#work" class="flex items-center gap-1 hover:text-gray-900 transition-colors">
 						<i data-feather="arrow-left" class="w-4 h-4"></i>
 						Back to work
@@ -29,24 +32,24 @@
 			<div class="max-w-5xl mx-auto px-6 lg:px-8 space-y-10">
 				<section class="grid md:grid-cols-2 gap-10 items-start">
 					<div class="space-y-4">
-						<p class="text-xs font-medium tracking-wide text-gray-500 uppercase">
+						<p class="text-xs font-medium tracking-wide text-gray-500 dark:text-gray-400 uppercase">
 							Featured Fullstack Laravel Project
 						</p>
-						<h1 class="text-3xl md:text-4xl font-semibold text-gray-900">
+						<h1 class="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white">
 							Rental Outdoor System
 						</h1>
-						<p class="text-sm text-gray-500">2023 · Fullstack Laravel</p>
-						<p class="text-gray-600 leading-relaxed">
+						<p class="text-sm text-gray-500 dark:text-gray-400">2023 · Fullstack Laravel</p>
+						<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
 							Aplikasi untuk penyewaan peralatan outdoor (camping, hiking, dll) dengan
 							sistem booking jadwal dan perhitungan biaya otomatis.
 						</p>
-						<div class="flex flex-wrap gap-2 text-xs text-gray-600">
-							<span class="bg-gray-100 px-2 py-1 rounded">Laravel</span>
-							<span class="bg-gray-100 px-2 py-1 rounded">Livewire</span>
-							<span class="bg-gray-100 px-2 py-1 rounded">MySQL</span>
+						<div class="flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-300">
+							<span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Laravel</span>
+							<span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Livewire</span>
+							<span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">MySQL</span>
 						</div>
 					</div>
-					<div class="rounded-2xl overflow-hidden bg-gray-100 shadow-sm">
+					<div class="rounded-2xl overflow-hidden bg-gray-100 dark:bg-white/10 shadow-sm">
 						<img
 							src="../images/depan-camping.png"
 							alt="Rental Outdoor System screenshot"
@@ -57,14 +60,14 @@
 
 				<!-- Short project summary, portfolio-friendly -->
 				<section class="space-y-4">
-					<h2 class="text-xl font-medium text-gray-900">Camping Rental System — Highlight</h2>
-					<p class="text-gray-600 leading-relaxed">
+					<h2 class="text-xl font-medium text-gray-900 dark:text-white">Camping Rental System — Highlight</h2>
+					<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
 						Aplikasi rental alat camping untuk Bontang Outdoor dengan alur booking yang jelas dari katalog,
 						form pemesanan, hingga bukti PDF dan panel admin untuk mengelola stok serta status pembayaran.
 					</p>
-					<div class="grid md:grid-cols-2 gap-6 text-sm text-gray-600">
+					<div class="grid md:grid-cols-2 gap-6 text-sm text-gray-600 dark:text-gray-300">
 						<div class="space-y-2">
-							<h3 class="text-sm font-semibold text-gray-900">Fitur utama</h3>
+							<h3 class="text-sm font-semibold text-gray-900 dark:text-white">Fitur utama</h3>
 							<ul class="list-disc list-inside space-y-1">
 								<li>Katalog alat dengan harga per hari dan stok.</li>
 								<li>Form booking multi-langkah tanpa perlu login.</li>
@@ -73,7 +76,7 @@
 							</ul>
 						</div>
 						<div class="space-y-2">
-							<h3 class="text-sm font-semibold text-gray-900">Panel admin</h3>
+							<h3 class="text-sm font-semibold text-gray-900 dark:text-white">Panel admin</h3>
 							<ul class="list-disc list-inside space-y-1">
 								<li>Dashboard ringkas jumlah booking & status.</li>
 								<li>CRUD alat (foto, harga, stok, status aktif).</li>
@@ -85,27 +88,27 @@
 
 				<section class="grid md:grid-cols-3 gap-10">
 					<div class="md:col-span-2 space-y-4">
-						<h2 class="text-xl font-medium text-gray-900">Project overview</h2>
-						<p class="text-gray-600 leading-relaxed">
+						<h2 class="text-xl font-medium text-gray-900 dark:text-white">Project overview</h2>
+						<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
 							User dapat melihat list alat outdoor yang tersedia, melakukan booking, dan
 							memilih tanggal ambil serta tanggal pengembalian. Sistem menghitung biaya
 							otomatis berdasarkan durasi sewa.
 						</p>
-						<ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+						<ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1">
 							<li>List alat outdoor dengan stok dan kondisi.</li>
 							<li>Form booking dengan validasi tanggal.</li>
 							<li>Perhitungan biaya dan ringkasan sewa.</li>
 						</ul>
 					</div>
-					<aside class="space-y-4 text-sm text-gray-600">
+					<aside class="space-y-4 text-sm text-gray-600 dark:text-gray-300">
 						<div>
-							<h3 class="text-xs font-semibold tracking-wide text-gray-500 uppercase mb-1">
+							<h3 class="text-xs font-semibold tracking-wide text-gray-500 dark:text-gray-400 uppercase mb-1">
 								Role
 							</h3>
 							<p>Fullstack Laravel (UI sederhana + backend logic).</p>
 						</div>
 						<div>
-							<h3 class="text-xs font-semibold tracking-wide text-gray-500 uppercase mb-1">
+							<h3 class="text-xs font-semibold tracking-wide text-gray-500 dark:text-gray-400 uppercase mb-1">
 								Tech
 							</h3>
 							<ul class="space-y-1 list-disc list-inside">
@@ -119,8 +122,6 @@
 			</div>
 		</main>
 
-		<script>
-			feather.replace();
-		</script>
+		<script src="project.js"></script>
 	</body>
 </html>

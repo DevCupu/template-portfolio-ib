@@ -1,18 +1,21 @@
 <!doctype html>
 <html lang="en">
   <head>
+  <!--themed-v1-->
+  <script>(function(){try{var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if(t==="dark")document.documentElement.classList.add("dark");}catch(e){}})();</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ib - All Projects</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
+  <script>tailwind.config={darkMode:"class",theme:{extend:{colors:{accent:"#0066cc",ink:"#1d1d1f",parchment:"#f5f5f7",tile:"#272729"}}}};</script>
+    <script src="../vendor/feather.min.js"></script>
     <link rel="stylesheet" href="../style.css" />
   </head>
-  <body class="bg-white text-gray-900">
-    <header class="border-b border-gray-100 bg-white/90 backdrop-blur-sm sticky top-0 z-40">
+  <body class="bg-white text-gray-900 dark:bg-[#0a0a0b] dark:text-white transition-colors duration-500 antialiased">
+    <header class="border-b border-gray-100 dark:border-white/10 bg-white/90 dark:bg-[#0a0a0b]/85 backdrop-blur-sm sticky top-0 z-40">
       <div class="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
-        <a href="../index.html" class="text-lg font-medium text-gray-900 hover:opacity-70 transition">Ib</a>
-        <a href="../index.html#work" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors">
+        <a href="../index.html" class="text-lg font-medium text-gray-900 dark:text-white hover:opacity-70 transition">Ib</a>
+        <a href="../index.html#work" class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 transition-colors">
           <i data-feather="arrow-left" class="w-4 h-4"></i>
           Back to portfolio
         </a>
@@ -21,61 +24,61 @@
 
     <main class="py-14 md:py-16">
       <div class="max-w-6xl mx-auto px-6 lg:px-8 space-y-10">
-        <section class="grid md:grid-cols-[1.2fr_0.8fr] gap-8 items-center bg-gradient-to-br from-gray-50 via-white to-gray-100 rounded-3xl border border-gray-100 px-6 md:px-10 py-8 shadow-sm">
+        <section class="grid md:grid-cols-[1.2fr_0.8fr] gap-8 items-center bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-[#141416] dark:via-[#0f0f10] dark:to-[#141416] rounded-3xl border border-gray-100 dark:border-white/10 px-6 md:px-10 py-8 shadow-sm">
           <div class="space-y-4">
-            <p class="text-xs font-semibold tracking-[0.14em] text-gray-500 uppercase">More projects</p>
-            <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 leading-tight">Kumpulan project lain yang pernah saya garap</h1>
-            <p class="text-gray-600 max-w-2xl">Pilihan proyek backend, fullstack, dan platform yang menunjukkan cara saya membangun produk yang siap dipakai: alur jelas, stack terukur, dan dokumentasi ringkas.</p>
-            <div class="flex flex-wrap gap-2 text-xs text-gray-600">
-              <span class="bg-white border border-gray-200 px-3 py-1 rounded-full shadow-sm">Backend & API</span>
-              <span class="bg-white border border-gray-200 px-3 py-1 rounded-full shadow-sm">Laravel Platforms</span>
-              <span class="bg-white border border-gray-200 px-3 py-1 rounded-full shadow-sm">Cloud & DevOps</span>
+            <p class="text-xs font-semibold tracking-[0.14em] text-gray-500 dark:text-gray-400 uppercase">More projects</p>
+            <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white leading-tight">Kumpulan project lain yang pernah saya garap</h1>
+            <p class="text-gray-600 dark:text-gray-300 max-w-2xl">Pilihan proyek backend, fullstack, dan platform yang menunjukkan cara saya membangun produk yang siap dipakai: alur jelas, stack terukur, dan dokumentasi ringkas.</p>
+            <div class="flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-300">
+              <span class="bg-white dark:bg-[#141416] border border-gray-200 dark:border-white/15 px-3 py-1 rounded-full shadow-sm">Backend & API</span>
+              <span class="bg-white dark:bg-[#141416] border border-gray-200 dark:border-white/15 px-3 py-1 rounded-full shadow-sm">Laravel Platforms</span>
+              <span class="bg-white dark:bg-[#141416] border border-gray-200 dark:border-white/15 px-3 py-1 rounded-full shadow-sm">Cloud & DevOps</span>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-3 text-sm">
-            <div class="p-4 rounded-2xl border border-gray-100 bg-white shadow-sm">
-              <p class="text-xs uppercase text-gray-500">Highlight</p>
-              <p class="text-base font-semibold text-gray-900">12+ project detail pages</p>
-              <p class="text-gray-600 mt-1">Semua bisa diklik untuk melihat breakdown lengkap fitur, peran, dan stack.</p>
+            <div class="p-4 rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-[#141416] shadow-sm">
+              <p class="text-xs uppercase text-gray-500 dark:text-gray-400">Highlight</p>
+              <p class="text-base font-semibold text-gray-900 dark:text-white">12+ project detail pages</p>
+              <p class="text-gray-600 dark:text-gray-300 mt-1">Semua bisa diklik untuk melihat breakdown lengkap fitur, peran, dan stack.</p>
             </div>
-            <div class="p-4 rounded-2xl border border-gray-100 bg-white shadow-sm">
-              <p class="text-xs uppercase text-gray-500">Teknologi</p>
-              <p class="text-base font-semibold text-gray-900">Laravel, Node.js, GCP</p>
-              <p class="text-gray-600 mt-1">Termasuk projek dengan Filament, Livewire, Express, Docker, Cloud Run.</p>
+            <div class="p-4 rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-[#141416] shadow-sm">
+              <p class="text-xs uppercase text-gray-500 dark:text-gray-400">Teknologi</p>
+              <p class="text-base font-semibold text-gray-900 dark:text-white">Laravel, Node.js, GCP</p>
+              <p class="text-gray-600 dark:text-gray-300 mt-1">Termasuk projek dengan Filament, Livewire, Express, Docker, Cloud Run.</p>
             </div>
-            <div class="p-4 rounded-2xl border border-gray-100 bg-white shadow-sm col-span-2">
-              <p class="text-xs uppercase text-gray-500">Cara baca</p>
-              <p class="text-gray-700">Klik kartu → lihat detail lengkap. Tag memberi gambaran cepat ruang lingkup & stack.</p>
+            <div class="p-4 rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-[#141416] shadow-sm col-span-2">
+              <p class="text-xs uppercase text-gray-500 dark:text-gray-400">Cara baca</p>
+              <p class="text-gray-700 dark:text-gray-200">Klik kartu → lihat detail lengkap. Tag memberi gambaran cepat ruang lingkup & stack.</p>
             </div>
           </div>
         </section>
 
         <section class="space-y-4">
           <div class="flex items-center justify-between">
-            <h2 class="text-xl md:text-2xl font-semibold text-gray-900">Daftar project</h2>
-            <p class="text-sm text-gray-500">Tersortir untuk mudah dipindai oleh recruiter / klien.</p>
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white">Daftar project</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Tersortir untuk mudah dipindai oleh recruiter / klien.</p>
           </div>
 
           <div class="grid md:grid-cols-2 gap-5 lg:gap-6">
-            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-[#141416] shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
               <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-rose-500"></div>
               <div class="p-5 space-y-3">
-                <div class="flex items-center gap-2 text-xs text-gray-500">
-                  <span class="px-2 py-1 rounded-full bg-gray-100 font-medium">2024 · Laravel 12</span>
-                  <span class="px-2 py-1 rounded-full bg-gray-100">Fullstack</span>
+                <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10 font-medium">2024 · Laravel 12</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10">Fullstack</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <div class="mt-1"><i data-feather="alert-circle" class="w-5 h-5 text-gray-500"></i></div>
+                  <div class="mt-1"><i data-feather="alert-circle" class="w-5 h-5 text-gray-500 dark:text-gray-400"></i></div>
                   <div class="space-y-2">
-                    <h3 class="text-lg font-semibold text-gray-900">Malimo Report | SI-Lapor – Management Pengaduan Masyarakat</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">Platform pengaduan masyarakat untuk kelurahan Malimongan: warga bisa membuat laporan, memantau status secara transparan, dan berdialog dengan staf kelurahan.</p>
-                    <div class="flex flex-wrap gap-2 text-xs text-gray-600">
-                      <span class="bg-gray-100 px-2 py-1 rounded">Laravel 12</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">Tailwind CSS</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">Vite</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">MySQL</span>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Malimo Report | SI-Lapor – Management Pengaduan Masyarakat</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Platform pengaduan masyarakat untuk kelurahan Malimongan: warga bisa membuat laporan, memantau status secara transparan, dan berdialog dengan staf kelurahan.</p>
+                    <div class="flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-300">
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Laravel 12</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Tailwind CSS</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Vite</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">MySQL</span>
                     </div>
-                    <a href="project-malimo-report.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 group-hover:text-gray-700">
+                    <a href="project-malimo-report.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-white group-hover:text-gray-700">
                       Lihat detail
                       <i data-feather="arrow-up-right" class="w-4 h-4"></i>
                     </a>
@@ -84,24 +87,24 @@
               </div>
             </article>
 
-            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-[#141416] shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
               <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500"></div>
               <div class="p-5 space-y-3">
-                <div class="flex items-center gap-2 text-xs text-gray-500">
-                  <span class="px-2 py-1 rounded-full bg-gray-100 font-medium">2024 · In progress</span>
-                  <span class="px-2 py-1 rounded-full bg-gray-100">Multi-tenant</span>
+                <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10 font-medium">2024 · In progress</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10">Multi-tenant</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <div class="mt-1"><i data-feather="users" class="w-5 h-5 text-gray-500"></i></div>
+                  <div class="mt-1"><i data-feather="users" class="w-5 h-5 text-gray-500 dark:text-gray-400"></i></div>
                   <div class="space-y-2">
-                    <h3 class="text-lg font-semibold text-gray-900">SIORMAWA – Student Organization Management System</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">Platform organisasi mahasiswa dengan manajemen anggota, kegiatan, dokumen, dan role-based access yang scalable untuk banyak organisasi.</p>
-                    <div class="flex flex-wrap gap-2 text-xs text-gray-600">
-                      <span class="bg-gray-100 px-2 py-1 rounded">Laravel 12</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">Tailwind</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">MySQL</span>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">SIORMAWA – Student Organization Management System</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Platform organisasi mahasiswa dengan manajemen anggota, kegiatan, dokumen, dan role-based access yang scalable untuk banyak organisasi.</p>
+                    <div class="flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-300">
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Laravel 12</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Tailwind</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">MySQL</span>
                     </div>
-                    <a href="project-organization.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 group-hover:text-gray-700">
+                    <a href="project-organization.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-white group-hover:text-gray-700">
                       Lihat detail
                       <i data-feather="arrow-up-right" class="w-4 h-4"></i>
                     </a>
@@ -110,24 +113,24 @@
               </div>
             </article>
 
-            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-[#141416] shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
               <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-indigo-600 to-sky-500"></div>
               <div class="p-5 space-y-3">
-                <div class="flex items-center gap-2 text-xs text-gray-500">
-                  <span class="px-2 py-1 rounded-full bg-gray-100 font-medium">2023 · Laravel</span>
-                  <span class="px-2 py-1 rounded-full bg-gray-100">Filament</span>
+                <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10 font-medium">2023 · Laravel</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10">Filament</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <div class="mt-1"><i data-feather="file-text" class="w-5 h-5 text-gray-500"></i></div>
+                  <div class="mt-1"><i data-feather="file-text" class="w-5 h-5 text-gray-500 dark:text-gray-400"></i></div>
                   <div class="space-y-2">
-                    <h3 class="text-lg font-semibold text-gray-900">CMS Portal Berita (Filament)</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">Dashboard Filament untuk mengelola artikel, kategori, dan user, plus halaman publik untuk daftar dan detail berita.</p>
-                    <div class="flex flex-wrap gap-2 text-xs text-gray-600">
-                      <span class="bg-gray-100 px-2 py-1 rounded">Laravel</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">Filament</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">MySQL</span>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">CMS Portal Berita (Filament)</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Dashboard Filament untuk mengelola artikel, kategori, dan user, plus halaman publik untuk daftar dan detail berita.</p>
+                    <div class="flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-300">
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Laravel</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Filament</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">MySQL</span>
                     </div>
-                    <a href="project-cms.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 group-hover:text-gray-700">
+                    <a href="project-cms.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-white group-hover:text-gray-700">
                       Lihat detail
                       <i data-feather="arrow-up-right" class="w-4 h-4"></i>
                     </a>
@@ -136,24 +139,24 @@
               </div>
             </article>
 
-            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-[#141416] shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
               <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></div>
               <div class="p-5 space-y-3">
-                <div class="flex items-center gap-2 text-xs text-gray-500">
-                  <span class="px-2 py-1 rounded-full bg-gray-100 font-medium">2024 · Production</span>
-                  <span class="px-2 py-1 rounded-full bg-gray-100">Booking</span>
+                <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10 font-medium">2024 · Production</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10">Booking</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <div class="mt-1"><i data-feather="map" class="w-5 h-5 text-gray-500"></i></div>
+                  <div class="mt-1"><i data-feather="map" class="w-5 h-5 text-gray-500 dark:text-gray-400"></i></div>
                   <div class="space-y-2">
-                    <h3 class="text-lg font-semibold text-gray-900">Dante Pine Enrekang – Tourism & Booking Platform</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">Portal pariwisata dengan landing page informatif, admin panel konten, dan sistem booking terpusat berbasis fasilitas.</p>
-                    <div class="flex flex-wrap gap-2 text-xs text-gray-600">
-                      <span class="bg-gray-100 px-2 py-1 rounded">Laravel 12</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">Blade</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">Booking System</span>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Dante Pine Enrekang – Tourism & Booking Platform</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Portal pariwisata dengan landing page informatif, admin panel konten, dan sistem booking terpusat berbasis fasilitas.</p>
+                    <div class="flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-300">
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Laravel 12</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Blade</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Booking System</span>
                     </div>
-                    <a href="project-tourism.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 group-hover:text-gray-700">
+                    <a href="project-tourism.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-white group-hover:text-gray-700">
                       Lihat detail
                       <i data-feather="arrow-up-right" class="w-4 h-4"></i>
                     </a>
@@ -162,24 +165,24 @@
               </div>
             </article>
 
-            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-[#141416] shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
               <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500"></div>
               <div class="p-5 space-y-3">
-                <div class="flex items-center gap-2 text-xs text-gray-500">
-                  <span class="px-2 py-1 rounded-full bg-gray-100 font-medium">2024 · Laravel</span>
-                  <span class="px-2 py-1 rounded-full bg-gray-100">POS</span>
+                <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10 font-medium">2024 · Laravel</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10">POS</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <div class="mt-1"><i data-feather="shopping-bag" class="w-5 h-5 text-gray-500"></i></div>
+                  <div class="mt-1"><i data-feather="shopping-bag" class="w-5 h-5 text-gray-500 dark:text-gray-400"></i></div>
                   <div class="space-y-2">
-                    <h3 class="text-lg font-semibold text-gray-900">POS System</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">Point of Sale untuk kafe: kasir, dapur, admin, ringkasan penjualan, manajemen menu, meja, dan metode pembayaran.</p>
-                    <div class="flex flex-wrap gap-2 text-xs text-gray-600">
-                      <span class="bg-gray-100 px-2 py-1 rounded">Laravel</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">Livewire</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">MySQL</span>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">POS System</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Point of Sale untuk kafe: kasir, dapur, admin, ringkasan penjualan, manajemen menu, meja, dan metode pembayaran.</p>
+                    <div class="flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-300">
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Laravel</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Livewire</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">MySQL</span>
                     </div>
-                    <a href="project-pos.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 group-hover:text-gray-700">
+                    <a href="project-pos.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-white group-hover:text-gray-700">
                       Lihat detail
                       <i data-feather="arrow-up-right" class="w-4 h-4"></i>
                     </a>
@@ -188,24 +191,24 @@
               </div>
             </article>
 
-            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-[#141416] shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
               <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-green-500 to-teal-500"></div>
               <div class="p-5 space-y-3">
-                <div class="flex items-center gap-2 text-xs text-gray-500">
-                  <span class="px-2 py-1 rounded-full bg-gray-100 font-medium">2023 · Laravel</span>
-                  <span class="px-2 py-1 rounded-full bg-gray-100">Rental</span>
+                <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10 font-medium">2023 · Laravel</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10">Rental</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <div class="mt-1"><i data-feather="compass" class="w-5 h-5 text-gray-500"></i></div>
+                  <div class="mt-1"><i data-feather="compass" class="w-5 h-5 text-gray-500 dark:text-gray-400"></i></div>
                   <div class="space-y-2">
-                    <h3 class="text-lg font-semibold text-gray-900">Rental Outdoor System</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">Booking alat camping dengan perhitungan biaya otomatis, bukti PDF, dan panel admin untuk stok dan status pembayaran.</p>
-                    <div class="flex flex-wrap gap-2 text-xs text-gray-600">
-                      <span class="bg-gray-100 px-2 py-1 rounded">Laravel</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">Livewire</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">MySQL</span>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Rental Outdoor System</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Booking alat camping dengan perhitungan biaya otomatis, bukti PDF, dan panel admin untuk stok dan status pembayaran.</p>
+                    <div class="flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-300">
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Laravel</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Livewire</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">MySQL</span>
                     </div>
-                    <a href="project-rental.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 group-hover:text-gray-700">
+                    <a href="project-rental.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-white group-hover:text-gray-700">
                       Lihat detail
                       <i data-feather="arrow-up-right" class="w-4 h-4"></i>
                     </a>
@@ -213,24 +216,24 @@
                 </div>
               </div>
             </article>
-            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-[#141416] shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
               <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-600 to-cyan-500"></div>
               <div class="p-5 space-y-3">
-                <div class="flex items-center gap-2 text-xs text-gray-500">
-                  <span class="px-2 py-1 rounded-full bg-gray-100 font-medium">2024 · Backend</span>
-                  <span class="px-2 py-1 rounded-full bg-gray-100">AI / API</span>
+                <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10 font-medium">2024 · Backend</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10">AI / API</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <div class="mt-1"><i data-feather="activity" class="w-5 h-5 text-gray-500"></i></div>
+                  <div class="mt-1"><i data-feather="activity" class="w-5 h-5 text-gray-500 dark:text-gray-400"></i></div>
                   <div class="space-y-2">
-                    <h3 class="text-lg font-semibold text-gray-900">Anemia Detection API</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">REST API untuk layanan ML deteksi anemia berbasis citra konjungtiva mata, siap diintegrasi aplikasi mobile.</p>
-                    <div class="flex flex-wrap gap-2 text-xs text-gray-600">
-                      <span class="bg-gray-100 px-2 py-1 rounded">Node.js</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">REST API</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">GCP</span>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Anemia Detection API</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">REST API untuk layanan ML deteksi anemia berbasis citra konjungtiva mata, siap diintegrasi aplikasi mobile.</p>
+                    <div class="flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-300">
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Node.js</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">REST API</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">GCP</span>
                     </div>
-                    <a href="project-anemia-api.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 group-hover:text-gray-700">
+                    <a href="project-anemia-api.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-white group-hover:text-gray-700">
                       Lihat detail
                       <i data-feather="arrow-up-right" class="w-4 h-4"></i>
                     </a>
@@ -239,24 +242,24 @@
               </div>
             </article>
 
-            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-[#141416] shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
               <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-slate-600 to-gray-500"></div>
               <div class="p-5 space-y-3">
-                <div class="flex items-center gap-2 text-xs text-gray-500">
-                  <span class="px-2 py-1 rounded-full bg-gray-100 font-medium">Latihan API</span>
-                  <span class="px-2 py-1 rounded-full bg-gray-100">Inventory</span>
+                <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10 font-medium">Latihan API</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10">Inventory</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <div class="mt-1"><i data-feather="database" class="w-5 h-5 text-gray-500"></i></div>
+                  <div class="mt-1"><i data-feather="database" class="w-5 h-5 text-gray-500 dark:text-gray-400"></i></div>
                   <div class="space-y-2">
-                    <h3 class="text-lg font-semibold text-gray-900">Backend Inventory REST API (Express)</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">CRUD stok barang, update stok masuk/keluar, dan penandaan low-stock untuk latihan logika bisnis di backend.</p>
-                    <div class="flex flex-wrap gap-2 text-xs text-gray-600">
-                      <span class="bg-gray-100 px-2 py-1 rounded">Express</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">Node.js</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">REST API</span>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Backend Inventory REST API (Express)</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">CRUD stok barang, update stok masuk/keluar, dan penandaan low-stock untuk latihan logika bisnis di backend.</p>
+                    <div class="flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-300">
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Express</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Node.js</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">REST API</span>
                     </div>
-                    <a href="project-backend-inventory-express.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 group-hover:text-gray-700">
+                    <a href="project-backend-inventory-express.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-white group-hover:text-gray-700">
                       Lihat detail
                       <i data-feather="arrow-up-right" class="w-4 h-4"></i>
                     </a>
@@ -265,24 +268,24 @@
               </div>
             </article>
 
-            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-[#141416] shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
               <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-slate-700 to-emerald-600"></div>
               <div class="p-5 space-y-3">
-                <div class="flex items-center gap-2 text-xs text-gray-500">
-                  <span class="px-2 py-1 rounded-full bg-gray-100 font-medium">Personal API</span>
-                  <span class="px-2 py-1 rounded-full bg-gray-100">Express + MongoDB</span>
+                <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10 font-medium">Personal API</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10">Express + MongoDB</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <div class="mt-1"><i data-feather="code" class="w-5 h-5 text-gray-500"></i></div>
+                  <div class="mt-1"><i data-feather="code" class="w-5 h-5 text-gray-500 dark:text-gray-400"></i></div>
                   <div class="space-y-2">
-                    <h3 class="text-lg font-semibold text-gray-900">Backend REST API (Express / MongoDB)</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">Latihan backend generik dengan desain endpoint konsisten, validasi request, dan pemisahan layer routing-controller-data.</p>
-                    <div class="flex flex-wrap gap-2 text-xs text-gray-600">
-                      <span class="bg-gray-100 px-2 py-1 rounded">Express</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">MongoDB</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">REST API</span>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Backend REST API (Express / MongoDB)</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Latihan backend generik dengan desain endpoint konsisten, validasi request, dan pemisahan layer routing-controller-data.</p>
+                    <div class="flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-300">
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Express</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">MongoDB</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">REST API</span>
                     </div>
-                    <a href="project-backend-rest-api.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 group-hover:text-gray-700">
+                    <a href="project-backend-rest-api.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-white group-hover:text-gray-700">
                       Lihat detail
                       <i data-feather="arrow-up-right" class="w-4 h-4"></i>
                     </a>
@@ -291,24 +294,24 @@
               </div>
             </article>
 
-            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+            <article class="group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-[#141416] shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
               <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-sky-500 to-indigo-600"></div>
               <div class="p-5 space-y-3">
-                <div class="flex items-center gap-2 text-xs text-gray-500">
-                  <span class="px-2 py-1 rounded-full bg-gray-100 font-medium">AI API</span>
-                  <span class="px-2 py-1 rounded-full bg-gray-100">Node.js</span>
+                <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10 font-medium">AI API</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-white/10">Node.js</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <div class="mt-1"><i data-feather="cpu" class="w-5 h-5 text-gray-500"></i></div>
+                  <div class="mt-1"><i data-feather="cpu" class="w-5 h-5 text-gray-500 dark:text-gray-400"></i></div>
                   <div class="space-y-2">
-                    <h3 class="text-lg font-semibold text-gray-900">Gemini AI API Project</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">Integrasi backend dengan Gemini API: wrapper function, manajemen API key, dan penanganan error dasar.</p>
-                    <div class="flex flex-wrap gap-2 text-xs text-gray-600">
-                      <span class="bg-gray-100 px-2 py-1 rounded">Gemini API</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">Node.js</span>
-                      <span class="bg-gray-100 px-2 py-1 rounded">Backend</span>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Gemini AI API Project</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Integrasi backend dengan Gemini API: wrapper function, manajemen API key, dan penanganan error dasar.</p>
+                    <div class="flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-300">
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Gemini API</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Node.js</span>
+                      <span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Backend</span>
                     </div>
-                    <a href="project-gemini-ai-api.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 group-hover:text-gray-700">
+                    <a href="project-gemini-ai-api.html" class="inline-flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-white group-hover:text-gray-700">
                       Lihat detail
                       <i data-feather="arrow-up-right" class="w-4 h-4"></i>
                     </a>
@@ -321,8 +324,6 @@
       </div>
     </main>
 
-    <script>
-      feather.replace();
-    </script>
+    <script src="project.js"></script>
   </body>
 </html>

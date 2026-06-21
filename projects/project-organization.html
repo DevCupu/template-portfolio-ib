@@ -1,18 +1,21 @@
 <!doctype html>
 <html lang="en">
 	<head>
+  <!--themed-v1-->
+  <script>(function(){try{var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if(t==="dark")document.documentElement.classList.add("dark");}catch(e){}})();</script>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>SIORMAWA - Student Organization Management System - Ib Portfolio</title>
 		<script src="https://cdn.tailwindcss.com"></script>
-		<script src="https://unpkg.com/feather-icons"></script>
+  <script>tailwind.config={darkMode:"class",theme:{extend:{colors:{accent:"#0066cc",ink:"#1d1d1f",parchment:"#f5f5f7",tile:"#272729"}}}};</script>
+		<script src="../vendor/feather.min.js"></script>
 		<link rel="stylesheet" href="../style.css" />
 	</head>
-	<body class="bg-white text-gray-900">
-		<header class="border-b border-gray-100 bg-white/90 backdrop-blur-sm sticky top-0 z-40">
+	<body class="bg-white text-gray-900 dark:bg-[#0a0a0b] dark:text-white transition-colors duration-500 antialiased">
+		<header class="border-b border-gray-100 dark:border-white/10 bg-white/90 dark:bg-[#0a0a0b]/85 backdrop-blur-sm sticky top-0 z-40">
 			<div class="max-w-5xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
-				<a href="../index.html" class="text-lg font-medium text-gray-900 hover:opacity-70 transition">Ib</a>
-				<nav class="flex items-center gap-4 text-sm text-gray-600">
+				<a href="../index.html" class="text-lg font-medium text-gray-900 dark:text-white hover:opacity-70 transition">Ib</a>
+				<nav class="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-300">
 					<a href="../index.html#work" class="flex items-center gap-1 hover:text-gray-900 transition-colors">
 						<i data-feather="arrow-left" class="w-4 h-4"></i>
 						Back to work
@@ -29,28 +32,28 @@
 			<div class="max-w-5xl mx-auto px-6 lg:px-8 space-y-10">
 				<section class="grid md:grid-cols-2 gap-10 items-start">
 					<div class="space-y-4">
-						<p class="text-xs font-medium tracking-wide text-gray-500 uppercase">
+						<p class="text-xs font-medium tracking-wide text-gray-500 dark:text-gray-400 uppercase">
 							Featured Laravel Platform
 						</p>
-						<h1 class="text-3xl md:text-4xl font-semibold text-gray-900">
+						<h1 class="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white">
 							SIORMAWA – Student Organization Management System
 						</h1>
-						<p class="text-sm text-gray-500">2024 · Laravel 12 · In active development (~80%)</p>
-						<p class="text-gray-600 leading-relaxed">
+						<p class="text-sm text-gray-500 dark:text-gray-400">2024 · Laravel 12 · In active development (~80%)</p>
+						<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
 							SIORMAWA adalah platform digital komprehensif untuk memodernisasi manajemen
 							organisasi kemahasiswaan. Sistem ini memusatkan pengelolaan data anggota,
 							kegiatan, arsip dokumen, dan distribusi informasi dalam satu aplikasi web
 							yang efisien dan transparan.
 						</p>
-						<div class="flex flex-wrap gap-2 text-xs text-gray-600">
-							<span class="bg-gray-100 px-2 py-1 rounded">Laravel 12</span>
-							<span class="bg-gray-100 px-2 py-1 rounded">Tailwind CSS</span>
-							<span class="bg-gray-100 px-2 py-1 rounded">Vite</span>
-							<span class="bg-gray-100 px-2 py-1 rounded">MySQL</span>
-							<span class="bg-gray-100 px-2 py-1 rounded">Role-based Access</span>
+						<div class="flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-300">
+							<span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Laravel 12</span>
+							<span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Tailwind CSS</span>
+							<span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Vite</span>
+							<span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">MySQL</span>
+							<span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Role-based Access</span>
 						</div>
 					</div>
-					   <div class="rounded-2xl overflow-hidden bg-gray-100 shadow-sm relative">
+					   <div class="rounded-2xl overflow-hidden bg-gray-100 dark:bg-white/10 shadow-sm relative">
 						   <div id="slider-container" class="w-full h-64 md:h-80 relative">
 							   <button id="slider-prev" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 rounded-full p-2 shadow hover:bg-white"><i data-feather="chevron-left"></i></button>
 							   <img id="slider-image" src="../images/siormawa.png" alt="Dashboard SIORMAWA - Sistem Informasi Manajemen Organisasi Mahasiswa" class="w-full h-64 md:h-80 object-cover transition-all duration-300" />
@@ -62,14 +65,14 @@
 
 				<section class="grid md:grid-cols-3 gap-10">
 					<div class="md:col-span-2 space-y-4">
-						<h2 class="text-xl font-medium text-gray-900">Project overview</h2>
-						<p class="text-gray-600 leading-relaxed">
+						<h2 class="text-xl font-medium text-gray-900 dark:text-white">Project overview</h2>
+						<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
 							SIORMAWA dirancang fleksibel untuk skala universitas maupun sekolah. Di
 							universitas, satu Admin Sistem (staff IT) mengelola platform, sementara
 							belasan Admin Organisasi mengurus himpunan/UKM masing-masing. Pada skala
 							sekolah, peran serupa dipegang oleh guru TI dan pembina OSIS/ekstrakurikuler.
 						</p>
-						<ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+						<ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1">
 							<li>Admin Sistem (Superadmin): manajemen pengguna, organisasi, monitoring,
 								serta pengumuman global.</li>
 							<li>Admin Organisasi: kelola data internal, anggota, kegiatan/event, dan arsip
@@ -77,13 +80,13 @@
 							<li>Member: melihat info organisasi, mengunduh dokumen, dan mendaftar ke
 								kegiatan dengan akses yang dibatasi.</li>
 						</ul>
-						<p class="text-gray-600 leading-relaxed">
+						<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
 							Di level database, sistem memakai pendekatan multi-tenancy sederhana: setiap
 							organisasi memiliki data anggota, event, dan dokumennya sendiri. Query di-
 							scope berdasarkan ID organisasi yang terhubung dengan akun admin, sehingga
 							privasi data antar organisasi tetap terjaga tanpa perlu memecah aplikasi.
 						</p>
-						<p class="text-gray-600 leading-relaxed">
+						<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
 							Struktur tabel inti meliputi <code>users</code>, <code>organizations</code>, <code>members</code>,
 							<code>events</code>, dan <code>documents</code>. Tabel users menyimpan akun login dan role,
 							sementara tabel members menyimpan biodata anggota yang bisa berdiri sendiri
@@ -91,9 +94,9 @@
 							tanpa memaksa semua anggota untuk langsung membuat akun.
 						</p>
 					</div>
-					<aside class="space-y-4 text-sm text-gray-600">
+					<aside class="space-y-4 text-sm text-gray-600 dark:text-gray-300">
 						<div>
-							<h3 class="text-xs font-semibold tracking-wide text-gray-500 uppercase mb-1">
+							<h3 class="text-xs font-semibold tracking-wide text-gray-500 dark:text-gray-400 uppercase mb-1">
 								Role
 							</h3>
 							<p>
@@ -102,7 +105,7 @@
 							</p>
 						</div>
 						<div>
-							<h3 class="text-xs font-semibold tracking-wide text-gray-500 uppercase mb-1">
+							<h3 class="text-xs font-semibold tracking-wide text-gray-500 dark:text-gray-400 uppercase mb-1">
 								Tech
 							</h3>
 							<ul class="space-y-1 list-disc list-inside">
@@ -113,7 +116,7 @@
 							</ul>
 						</div>
 						<div>
-							<h3 class="text-xs font-semibold tracking-wide text-gray-500 uppercase mb-1">
+							<h3 class="text-xs font-semibold tracking-wide text-gray-500 dark:text-gray-400 uppercase mb-1">
 								Development status
 							</h3>
 							<p>
@@ -172,5 +175,6 @@
 				   updateSlider();
 			   };
 		   </script>
-	</body>
+	  <script src="project.js"></script>
+  </body>
 </html>
